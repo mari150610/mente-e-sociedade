@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-Estar Digital - Cuidando da Mente na Era das Redes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Santos e Santas - Guia Completo dos Bem-Aventurados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Crimson Text', serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #fff9e6 0%, #fef7f0 50%, #f0f8ff 100%);
-            color: #5a5a5a;
+            background: linear-gradient(135deg, #2c1810 0%, #8b4513 30%, #daa520 100%);
+            color: #2c1810;
+            min-height: 100vh;
         }
 
         .container {
@@ -23,120 +24,60 @@
         }
 
         header {
-            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 50%, #fff8dc 100%);
-            padding: 4rem 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #daa520;
+            padding: 3rem 0;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .clouds {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .cloud {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            opacity: 0.7;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .cloud:before,
-        .cloud:after {
+        header::before {
             content: '';
             position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-        }
-
-        .cloud1 {
-            width: 100px;
-            height: 40px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .cloud1:before {
-            width: 50px;
-            height: 50px;
-            top: -25px;
-            left: 10px;
-        }
-
-        .cloud1:after {
-            width: 60px;
-            height: 20px;
-            top: -10px;
-            right: 10px;
-        }
-
-        .cloud2 {
-            width: 80px;
-            height: 30px;
-            top: 60%;
-            right: 15%;
-            animation-delay: -10s;
-        }
-
-        .cloud2:before {
-            width: 40px;
-            height: 40px;
-            top: -20px;
-            left: 15px;
-        }
-
-        .cloud2:after {
-            width: 50px;
-            height: 15px;
-            top: -5px;
-            right: 15px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateX(0px) translateY(0px); }
-            25% { transform: translateX(10px) translateY(-10px); }
-            50% { transform: translateX(-5px) translateY(5px); }
-            75% { transform: translateX(5px) translateY(-5px); }
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cross" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 0v20M0 10h20" stroke="%23daa520" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23cross)"/></svg>');
+            opacity: 0.3;
         }
 
         h1 {
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Cinzel', serif;
             font-size: 3.5rem;
             margin: 0;
             font-weight: 700;
-            background: linear-gradient(45deg, #4682b4, #ff69b4, #ffd700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             position: relative;
             z-index: 10;
         }
 
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-top: 1rem;
-            color: #6b7280;
-            font-weight: 300;
+            opacity: 0.9;
+            font-style: italic;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cross-decoration {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: #daa520;
             position: relative;
             z-index: 10;
         }
 
         nav {
-            background: rgba(255,255,255,0.9);
+            background: rgba(218, 165, 32, 0.95);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(135, 206, 235, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         .nav-links {
@@ -147,19 +88,21 @@
         }
 
         .nav-links a {
-            color: #87ceeb;
+            color: #1a1a2e;
             text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             transition: all 0.3s ease;
-            font-weight: 500;
-            background: rgba(255, 182, 193, 0.1);
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            font-family: 'Cinzel', serif;
         }
 
         .nav-links a:hover {
-            background: linear-gradient(135deg, #87ceeb, #ffb6c1);
-            color: white;
+            background: #1a1a2e;
+            color: #daa520;
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         section {
@@ -168,26 +111,23 @@
         }
 
         .intro-section {
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .intro-content {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 25px;
+            background: rgba(255, 248, 220, 0.95);
+            border-radius: 20px;
             padding: 3rem;
-            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
-            backdrop-filter: blur(10px);
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            border: 2px solid #daa520;
         }
 
         .section-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
+            background: rgba(255, 248, 220, 0.95);
+            border-radius: 15px;
             padding: 2.5rem;
             margin: 2rem 0;
-            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.15);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-left: 5px solid #8b4513;
         }
 
         .section-card:hover {
@@ -195,146 +135,169 @@
         }
 
         h2 {
-            color: #4682b4;
-            font-size: 2.2rem;
+            color: #8b4513;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            border-bottom: 3px solid #ffb6c1;
+            border-bottom: 3px solid #daa520;
             padding-bottom: 0.5rem;
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Cinzel', serif;
             font-weight: 600;
+            text-align: center;
         }
 
         h3 {
-            color: #ff69b4;
-            font-size: 1.5rem;
+            color: #1a1a2e;
+            font-size: 1.6rem;
             margin-top: 2rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: 'Cinzel', serif;
         }
 
-        .highlight-box {
-            background: linear-gradient(135deg, #fff8dc 0%, #ffe4e1 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border-left: 5px solid #ffd700;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .video-grid, .news-grid {
+        .saints-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
-        .video-card, .news-card {
+        .saint-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.15);
-            border-top: 4px solid #87ceeb;
-            transition: transform 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            border-top: 4px solid #8b4513;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .video-card:hover, .news-card:hover {
-            transform: translateY(-3px);
+        .saint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .support-section {
-            background: linear-gradient(135deg, #f0f8ff 0%, #fff0f5 100%);
-            border-radius: 25px;
-            padding: 3rem;
-            margin: 3rem 0;
+        .saint-card::before {
+            content: '✝';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            background: #daa520;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .support-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+        .saint-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #8b4513;
+            margin-bottom: 0.5rem;
         }
 
-        .support-card {
-            background: rgba(255, 255, 255, 0.9);
+        .saint-title {
+            font-style: italic;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .saint-date {
+            background: #daa520;
+            color: white;
+            padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
 
-        .support-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .emergency-section {
-            background: rgba(255, 240, 245, 0.8);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 2px solid rgba(255, 182, 193, 0.3);
-        }
-
-        .emergency-section h3 {
-            color: #ff69b4;
-            font-size: 1.3rem;
+        .saint-description {
+            color: #2c1810;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        .contact-info {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #4682b4;
-            margin: 0.5rem 0;
+        .saint-patronage {
+            background: rgba(218, 165, 32, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #daa520;
+            margin-top: 1rem;
+        }
+
+        .category-header {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .prayer-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #daa520;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .prayer-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 2rem 0;
         }
 
         .btn {
             display: inline-block;
             padding: 0.8rem 2rem;
-            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 100%);
+            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
             color: white;
             text-decoration: none;
             border-radius: 25px;
             transition: all 0.3s ease;
             margin: 0.5rem;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+            font-weight: 600;
+            font-family: 'Cinzel', serif;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
-        }
-
-        .btn-soft {
-            background: linear-gradient(135deg, #ffb6c1 0%, #fff8dc 100%);
-            color: #4682b4;
-            font-size: 0.9rem;
-            padding: 0.6rem 1.5rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
         footer {
-            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 100%);
-            color: white;
+            background: #1a1a2e;
+            color: #daa520;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
             margin-top: 3rem;
         }
 
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .gentle-reminder {
-            background: rgba(255, 248, 220, 0.9);
+        .highlight-box {
+            background: rgba(218, 165, 32, 0.1);
+            padding: 2rem;
             border-radius: 15px;
-            padding: 1.5rem;
             margin: 2rem 0;
-            border-left: 4px solid #ffd700;
-            font-style: italic;
-            color: #6b7280;
+            border: 2px solid #daa520;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -348,219 +311,422 @@
                 gap: 1rem;
             }
             
-            .section-card, .intro-content {
+            .section-card, .intro-section {
                 padding: 1.5rem;
+            }
+            
+            .saints-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="clouds">
-            <div class="cloud cloud1"></div>
-            <div class="cloud cloud2"></div>
-        </div>
         <div class="container">
-            <h1>✨ Mente Serena ✨</h1>
-            <p class="subtitle">Navegando com equilíbrio no mundo digital</p>
+            <h1>⛪ Santos e Santas</h1>
+            <div class="cross-decoration">✠ ✠ ✠</div>
+            <p class="subtitle">Guia Completo dos Bem-Aventurados da Igreja Católica</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <div class="nav-links">
-                <a href="#inicio">🏠 Início</a>
-                <a href="#conexao">🔗 Conexões</a>
-                <a href="#bem-estar">💙 Bem-Estar</a>
-                <a href="#recursos">📚 Recursos</a>
-                <a href="#apoio">🤝 Apoio</a>
+                <a href="#inicio">🏛️ Início</a>
+                <a href="#apostolos">✝️ Apóstolos</a>
+                <a href="#martires">🕊️ Mártires</a>
+                <a href="#doutores">📚 Doutores</a>
+                <a href="#fundadores">⛪ Fundadores</a>
+                <a href="#misticos">🌟 Místicos</a>
+                <a href="#oracao">🙏 Oração</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <section id="inicio" class="intro-section">
-            <div class="intro-content">
-                <h2>🌸 Bem-vindo ao seu espaço de cuidado</h2>
-                <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem;">
-                    Vivemos em uma era digital maravilhosa, cheia de conexões e possibilidades. 
-                    Aqui, vamos explorar juntos como cuidar da nossa mente enquanto navegamos 
-                    pelas redes sociais de forma mais consciente e equilibrada.
+            <h2>🕊️ Bem-vindos ao Santuário Digital</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                Explore a vida e os ensinamentos dos santos e santas que iluminaram o caminho da fé 
+                ao longo dos séculos. Cada um deles nos deixou um legado de amor, dedicação e santidade.
+            </p>
+            
+            <div class="highlight-box">
+                <h3>✨ O que você encontrará aqui:</h3>
+                <p>Biografias detalhadas, datas comemorativas, patronatos, orações e ensinamentos 
+                dos bem-aventurados que nos inspiram na jornada espiritual.</p>
+            </div>
+        </section>
+
+        <section id="apostolos">
+            <div class="category-header">
+                <div class="category-icon">✝️</div>
+                <h2>Os Santos Apóstolos</h2>
+                <p>Os doze escolhidos por Jesus Cristo para espalhar Sua palavra pelo mundo</p>
+            </div>
+
+            <div class="saints-grid">
+                <div class="saint-card">
+                    <div class="saint-name">São Pedro</div>
+                    <div class="saint-title">Príncipe dos Apóstolos, Primeiro Papa</div>
+                    <div class="saint-date">29 de Junho</div>
+                    <div class="saint-description">
+                        Simão Pedro, pescador de Betsaida, foi escolhido por Jesus para ser a pedra 
+                        fundamental da Igreja. Apesar de suas fraquezas humanas, tornou-se o líder 
+                        dos apóstolos e primeiro Papa da Igreja Católica.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Pescadores, Porteiros, Igreja Universal
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Paulo</div>
+                    <div class="saint-title">Apóstolo dos Gentios</div>
+                    <div class="saint-date">29 de Junho</div>
+                    <div class="saint-description">
+                        Saulo de Tarso, perseguidor dos cristãos, converteu-se após uma visão de Cristo 
+                        no caminho de Damasco. Tornou-se o grande missionário do cristianismo, 
+                        levando o Evangelho aos povos gentios.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Missionários, Escritores, Jornalistas
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São João Evangelista</div>
+                    <div class="saint-title">O Discípulo Amado</div>
+                    <div class="saint-date">27 de Dezembro</div>
+                    <div class="saint-description">
+                        O mais jovem dos apóstolos, conhecido como "o discípulo que Jesus amava". 
+                        Autor do quarto Evangelho, das três epístolas e do Apocalipse. 
+                        Único apóstolo que não morreu mártir.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Escritores, Teólogos, Editores
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Tiago Maior</div>
+                    <div class="saint-title">Santiago de Compostela</div>
+                    <div class="saint-date">25 de Julho</div>
+                    <div class="saint-description">
+                        Irmão de São João, foi um dos três apóstolos mais próximos de Jesus. 
+                        Pregou na Espanha e foi martirizado por Herodes Agripa. 
+                        Seu túmulo em Compostela é destino de peregrinação mundial.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Espanha, Peregrinos, Cavaleiros
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="martires">
+            <div class="category-header">
+                <div class="category-icon">🕊️</div>
+                <h2>Santos Mártires</h2>
+                <p>Aqueles que deram suas vidas pela fé cristã</p>
+            </div>
+
+            <div class="saints-grid">
+                <div class="saint-card">
+                    <div class="saint-name">Santo Estêvão</div>
+                    <div class="saint-title">Primeiro Mártir Cristão</div>
+                    <div class="saint-date">26 de Dezembro</div>
+                    <div class="saint-description">
+                        Primeiro diácono e primeiro mártir da Igreja. Foi apedrejado por pregar 
+                        sobre Jesus Cristo. Suas últimas palavras foram de perdão para seus 
+                        executores, seguindo o exemplo de Cristo.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Diáconos, Pedreiros, Cavalos
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santa Águeda</div>
+                    <div class="saint-title">Virgem e Mártir</div>
+                    <div class="saint-date">5 de Fevereiro</div>
+                    <div class="saint-description">
+                        Jovem siciliana que consagrou sua virgindade a Cristo. Sofreu torturas 
+                        terríveis por recusar-se a renunciar à fé e casar-se com um pagão. 
+                        É invocada contra terremotos e erupções vulcânicas.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrona de:</strong> Enfermeiras, Sicília, Contra desastres naturais
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Sebastião</div>
+                    <div class="saint-title">Soldado Mártir</div>
+                    <div class="saint-date">20 de Janeiro</div>
+                    <div class="saint-description">
+                        Soldado romano que se converteu ao cristianismo. Foi descoberto e 
+                        condenado a morrer flechado. Sobreviveu milagrosamente, mas foi 
+                        posteriormente martirizado. É invocado contra pestes e epidemias.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Soldados, Atletas, Contra epidemias
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santa Cecília</div>
+                    <div class="saint-title">Virgem e Mártir</div>
+                    <div class="saint-date">22 de Novembro</div>
+                    <div class="saint-description">
+                        Nobre romana que consagrou sua virgindade a Deus. Converteu seu esposo 
+                        e cunhado ao cristianismo. Foi martirizada por sua fé. 
+                        Segundo a tradição, cantava louvores a Deus durante seu martírio.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrona de:</strong> Músicos, Cantores, Instrumentistas
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doutores">
+            <div class="category-header">
+                <div class="category-icon">📚</div>
+                <h2>Doutores da Igreja</h2>
+                <p>Santos reconhecidos por sua contribuição teológica excepcional</p>
+            </div>
+
+            <div class="saints-grid">
+                <div class="saint-card">
+                    <div class="saint-name">Santo Agostinho</div>
+                    <div class="saint-title">Doutor da Graça</div>
+                    <div class="saint-date">28 de Agosto</div>
+                    <div class="saint-description">
+                        Bispo de Hipona, filósofo e teólogo. Após uma juventude dissoluta, 
+                        converteu-se e tornou-se um dos maiores pensadores cristãos. 
+                        Autor de "Confissões" e "A Cidade de Deus".
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Teólogos, Filósofos, Cervejeiros
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Tomás de Aquino</div>
+                    <div class="saint-title">Doutor Angélico</div>
+                    <div class="saint-date">28 de Janeiro</div>
+                    <div class="saint-description">
+                        Frade dominicano, filósofo e teólogo. Criou a síntese entre a filosofia 
+                        aristotélica e a doutrina cristã. Autor da "Suma Teológica", 
+                        obra fundamental da teologia católica.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Estudantes, Universidades, Filósofos
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santa Teresa de Ávila</div>
+                    <div class="saint-title">Doutora da Igreja</div>
+                    <div class="saint-date">15 de Outubro</div>
+                    <div class="saint-description">
+                        Carmelita espanhola, mística e reformadora. Fundou numerosos conventos 
+                        e reformou a Ordem do Carmo. Suas obras sobre vida espiritual são 
+                        clássicos da literatura mística cristã.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrona de:</strong> Espanha, Escritores espirituais, Carmelitas
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São João Crisóstomo</div>
+                    <div class="saint-title">Boca de Ouro</div>
+                    <div class="saint-date">13 de Setembro</div>
+                    <div class="saint-description">
+                        Arcebispo de Constantinopla, famoso por sua eloquência na pregação. 
+                        Seus sermões eram tão belos que recebeu o título de "Crisóstomo" 
+                        (boca de ouro). Grande reformador da Igreja Oriental.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Pregadores, Oradores, Igreja Oriental
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fundadores">
+            <div class="category-header">
+                <div class="category-icon">⛪</div>
+                <h2>Santos Fundadores</h2>
+                <p>Fundadores de ordens religiosas e movimentos espirituais</p>
+            </div>
+
+            <div class="saints-grid">
+                <div class="saint-card">
+                    <div class="saint-name">São Bento</div>
+                    <div class="saint-title">Pai do Monasticismo Ocidental</div>
+                    <div class="saint-date">11 de Julho</div>
+                    <div class="saint-description">
+                        Fundador da Ordem Beneditina e autor da Regra de São Bento. 
+                        Estabeleceu os princípios do monasticismo ocidental com o lema 
+                        "Ora et Labora" (Reza e Trabalha). Patrono da Europa.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Europa, Monges, Estudantes
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Francisco de Assis</div>
+                    <div class="saint-title">Poverello de Assis</div>
+                    <div class="saint-date">4 de Outubro</div>
+                    <div class="saint-description">
+                        Fundador da Ordem Franciscana. Renunciou às riquezas para viver em 
+                        pobreza absoluta, pregando o Evangelho. Recebeu os estigmas de Cristo. 
+                        Grande amante da natureza e da paz.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Itália, Ecologistas, Animais
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santo Inácio de Loyola</div>
+                    <div class="saint-title">Fundador da Companhia de Jesus</div>
+                    <div class="saint-date">31 de Julho</div>
+                    <div class="saint-description">
+                        Soldado espanhol que se converteu após ser ferido em batalha. 
+                        Fundou a Companhia de Jesus (Jesuítas) e criou os "Exercícios Espirituais". 
+                        Grande missionário e educador.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Jesuítas, Soldados, Exercícios espirituais
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Domingos de Gusmão</div>
+                    <div class="saint-title">Fundador da Ordem dos Pregadores</div>
+                    <div class="saint-date">8 de Agosto</div>
+                    <div class="saint-description">
+                        Sacerdote espanhol que fundou a Ordem Dominicana para combater as heresias 
+                        através da pregação e do estudo. Promoveu a devoção ao Santo Rosário. 
+                        Grande defensor da ortodoxia católica.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Dominicanos, Pregadores, Astronomos
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="misticos">
+            <div class="category-header">
+                <div class="category-icon">🌟</div>
+                <h2>Santos Místicos</h2>
+                <p>Santos que experimentaram união especial com Deus</p>
+            </div>
+
+            <div class="saints-grid">
+                <div class="saint-card">
+                    <div class="saint-name">São João da Cruz</div>
+                    <div class="saint-title">Doutor Místico</div>
+                    <div class="saint-date">14 de Dezembro</div>
+                    <div class="saint-description">
+                        Carmelita espanhol, poeta e místico. Colaborou com Santa Teresa na 
+                        reforma do Carmelo. Autor de obras clássicas sobre a vida mística, 
+                        incluindo "Noite Escura da Alma" e "Cântico Espiritual".
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Poetas místicos, Carmelitas, Contemplatives
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santa Catarina de Siena</div>
+                    <div class="saint-title">Doutora da Igreja</div>
+                    <div class="saint-date">29 de Abril</div>
+                    <div class="saint-description">
+                        Terciária dominicana, mística e doutora da Igreja. Teve visões místicas 
+                        desde jovem e recebeu os estigmas invisíveis. Influenciou papas e 
+                        governantes, contribuindo para o fim do Cisma do Ocidente.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrona de:</strong> Itália, Europa, Enfermeiras
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">Santa Faustina</div>
+                    <div class="saint-title">Apóstola da Divina Misericórdia</div>
+                    <div class="saint-date">5 de Outubro</div>
+                    <div class="saint-description">
+                        Religiosa polaca que recebeu visões de Jesus Cristo, que lhe pediu 
+                        para promover a devoção à Divina Misericórdia. Escreveu um diário 
+                        espiritual com mais de 600 páginas sobre suas experiências místicas.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrona de:</strong> Divina Misericórdia, Polônia, Mundo
+                    </div>
+                </div>
+
+                <div class="saint-card">
+                    <div class="saint-name">São Padre Pio</div>
+                    <div class="saint-title">Estigmatizado de Pietrelcina</div>
+                    <div class="saint-date">23 de Setembro</div>
+                    <div class="saint-description">
+                        Frade capuchinho italiano que recebeu os estigmas de Cristo por 50 anos. 
+                        Possuía dons místicos como bilocação, cura e leitura das almas. 
+                        Fundou a Casa Alívio do Sofrimento, hospital em San Giovanni Rotondo.
+                    </div>
+                    <div class="saint-patronage">
+                        <strong>Patrono de:</strong> Grupos de oração, Voluntários, Estressados
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oracao" class="prayer-section">
+            <h2>🙏 Oração aos Santos</h2>
+            <div class="prayer-text">
+                "Ó Santos e Santas de Deus,<br>
+                que vivestes na terra como nós<br>
+                e agora gozais da visão beatífica,<br>
+                intercedei por nós junto ao Pai.<br><br>
+                
+                Ajudai-nos a seguir vosso exemplo<br>
+                de fé, esperança e caridade,<br>
+                para que um dia possamos<br>
+                juntar-nos a vós na glória eterna.<br><br>
+                
+                Por Cristo nosso Senhor.<br>
+                Amém."
+            </div>
+            
+            <div class="highlight-box" style="background: rgba(218, 165, 32, 0.2); border-color: #daa520;">
+                <h3>✨ Comunhão dos Santos</h3>
+                <p style="color: #daa520;">
+                    "Cremos na comunhão de todos os fiéis cristãos, dos que peregrinam na terra, 
+                    dos que se purificam depois da morte e dos que gozam da bem-aventurança celeste, 
+                    formando todos juntos uma só Igreja."
                 </p>
-                
-                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">☁️</div>
-                        <p style="color: #87ceeb; font-weight: 500;">Leveza</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌈</div>
-                        <p style="color: #ff69b4; font-weight: 500;">Equilíbrio</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌟</div>
-                        <p style="color: #ffd700; font-weight: 500;">Bem-estar</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="conexao">
-            <div class="section-card">
-                <h2>🔗 O Mundo Digital e Nossas Emoções</h2>
-                <p>As redes sociais são como janelas para o mundo - nos conectam, inspiram e informam. 
-                Mas às vezes, essas janelas podem distorcer nossa visão da realidade.</p>
-                
-                <div class="highlight-box">
-                    <h3>🌱 Reflexões Importantes:</h3>
-                    <ul>
-                        <li>Cada pessoa compartilha apenas uma pequena parte de sua vida</li>
-                        <li>Filtros e edições criam versões idealizadas da realidade</li>
-                        <li>Comparações podem afetar nossa autoestima e bem-estar</li>
-                        <li>O tempo que passamos online influencia nosso humor</li>
-                    </ul>
-                </div>
-
-                <h3>🎭 Além da "Vida Perfeita"</h3>
-                <p>É natural admirar as conquistas dos outros, mas lembre-se: por trás de cada foto perfeita, 
-                existe uma pessoa real, com desafios, medos e momentos difíceis como todos nós.</p>
-                
-                <div class="gentle-reminder">
-                    💝 Lembre-se: Sua jornada é única e valiosa, independente do que você vê nas redes sociais.
-                </div>
-            </div>
-        </section>
-
-        <section id="bem-estar">
-            <div class="section-card">
-                <h2>💙 Cuidando do Seu Bem-Estar Digital</h2>
-                
-                <h3>🌸 Sinais para Prestar Atenção</h3>
-                <p>Nosso corpo e mente nos dão sinais quando precisamos de uma pausa:</p>
-                <ul>
-                    <li>Sentir-se triste ou ansioso após usar as redes</li>
-                    <li>Comparar-se frequentemente com outros</li>
-                    <li>Verificar o celular compulsivamente</li>
-                    <li>Perder sono ou tempo de qualidade com pessoas queridas</li>
-                    <li>Sentir que a vida dos outros é sempre melhor</li>
-                </ul>
-
-                <div class="highlight-box">
-                    <h3>🌟 Práticas de Autocuidado Digital</h3>
-                    <ul>
-                        <li><strong>Pausas conscientes:</strong> Reserve momentos sem telas</li>
-                        <li><strong>Curadoria positiva:</strong> Siga contas que te inspiram genuinamente</li>
-                        <li><strong>Tempo de qualidade:</strong> Priorize atividades offline que te fazem bem</li>
-                        <li><strong>Gratidão diária:</strong> Foque no que há de bom na sua vida real</li>
-                        <li><strong>Conexões reais:</strong> Cultive relacionamentos presenciais</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="recursos">
-            <div class="section-card">
-                <h2>📚 Recursos para Aprender e Crescer</h2>
-                
-                <h3>🎥 Vídeos Inspiradores</h3>
-                <div class="video-grid">
-                    <div class="video-card">
-                        <h3>🧠 Como as Redes Afetam Nossa Mente</h3>
-                        <p>Uma explicação gentil sobre como nosso cérebro reage às redes sociais.</p>
-                        <a href="https://www.youtube.com/watch?v=NUMa0QkPzns" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
-                    </div>
-                    <div class="video-card">
-                        <h3>🧘 Mindfulness no Dia a Dia</h3>
-                        <p>Técnicas simples para usar a tecnologia com mais consciência.</p>
-                        <a href="https://www.youtube.com/watch?v=wLTQjMVqvQw" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
-                    </div>
-                    <div class="video-card">
-                        <h3>💚 Bem-Estar na Era Digital</h3>
-                        <p>Conversas sobre como manter o equilíbrio no mundo conectado.</p>
-                        <a href="https://www.youtube.com/watch?v=6jMhMVEjEQg" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
-                    </div>
-                </div>
-
-                <h3>📖 Artigos e Pesquisas</h3>
-                <div class="news-grid">
-                    <div class="news-card">
-                        <h3>🔍 Pesquisas sobre Bem-Estar Digital</h3>
-                        <p>Estudos recentes sobre o impacto das redes sociais no bem-estar emocional.</p>
-                        <a href="https://www.bbc.com/portuguese/articles/c4n1k8zk8z4o" target="_blank" rel="noopener noreferrer" class="btn">Ler Mais</a>
-                    </div>
-                    <div class="news-card">
-                        <h3>🌍 Saúde Mental Global</h3>
-                        <p>Informações da OMS sobre saúde mental na era digital.</p>
-                        <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank" rel="noopener noreferrer" class="btn">Explorar</a>
-                    </div>
-                    <div class="news-card">
-                        <h3>🇧🇷 Recursos Nacionais</h3>
-                        <p>Informações sobre saúde mental e bem-estar no Brasil.</p>
-                        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-mental" target="_blank" rel="noopener noreferrer" class="btn">Conhecer</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="apoio">
-            <div class="support-section">
-                <h2>🤝 Rede de Cuidado e Apoio</h2>
-                <p style="text-align: center; font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;">
-                    Às vezes, todos precisamos de uma mão amiga. Aqui estão alguns recursos gentis para quando você precisar de apoio.
-                </p>
-                
-                <div class="support-grid">
-                    <div class="support-card">
-                        <div class="icon">💬</div>
-                        <h3>Conversa Acolhedora</h3>
-                        <div class="contact-info">CVV - 188</div>
-                        <p>Apoio emocional gratuito, 24 horas, todos os dias.</p>
-                        <a href="https://www.cvv.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Conhecer</a>
-                    </div>
-                    <div class="support-card">
-                        <div class="icon">🏥</div>
-                        <h3>Cuidado Profissional</h3>
-                        <div class="contact-info">CAPS - 136</div>
-                        <p>Centros especializados em cuidado psicológico.</p>
-                        <a href="https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/caps" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Localizar</a>
-                    </div>
-                    <div class="support-card">
-                        <div class="icon">🗺️</div>
-                        <h3>Encontrar Ajuda</h3>
-                        <p>Mapa com profissionais e serviços na sua região.</p>
-                        <a href="https://www.mapadasaudemental.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Explorar</a>
-                    </div>
-                    <div class="support-card">
-                        <div class="icon">💛</div>
-                        <h3>Setembro Amarelo</h3>
-                        <p>Recursos e informações sobre prevenção e cuidado.</p>
-                        <a href="https://www.setembroamarelo.com" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Visitar</a>
-                    </div>
-                </div>
-
-                <div class="emergency-section">
-                    <h3>🌸 Em Momentos Difíceis</h3>
-                    <p>Se você está passando por um momento muito difícil, saiba que não está sozinho. 
-                    Existem pessoas preparadas para ajudar:</p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-                        <div style="text-align: center;">
-                            <div class="contact-info">💙 CVV: 188</div>
-                            <p style="font-size: 0.9rem; color: #6b7280;">Conversa acolhedora</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <div class="contact-info">🏥 SAMU: 192</div>
-                            <p style="font-size: 0.9rem; color: #6b7280;">Emergências médicas</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>💝 Feito com carinho para promover bem-estar digital</p>
-            <p style="font-size: 0.9rem; opacity: 0.8;">Este site oferece informações educativas e não substitui acompanhamento profissional.</p>
+            <div class="cross-decoration">✠ ✠ ✠</div>
+            <p>⛪ Santos e Santas - Guia Espiritual</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
+                "Sede santos, porque Eu sou santo" - 1 Pedro 1:16
+            </p>
+            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 1rem;">
+                Site educativo sobre a vida dos santos da Igreja Católica
+            </p>
         </div>
     </footer>
 
@@ -581,7 +747,7 @@
 
         // Animação suave ao carregar a página
         window.addEventListener('load', function() {
-            document.querySelectorAll('.section-card, .intro-content').forEach((card, index) => {
+            document.querySelectorAll('.saint-card, .section-card').forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(30px)';
                 card.style.transition = 'all 0.8s ease';
@@ -589,20 +755,22 @@
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, index * 300);
+                }, index * 150);
             });
         });
 
-        // Efeito parallax suave nas nuvens
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const clouds = document.querySelectorAll('.cloud');
-            clouds.forEach((cloud, index) => {
-                const speed = 0.5 + (index * 0.2);
-                cloud.style.transform = `translateY(${scrolled * speed}px)`;
+        // Efeito de brilho nas cruzes do header
+        setInterval(() => {
+            const crosses = document.querySelectorAll('.cross-decoration');
+            crosses.forEach(cross => {
+                cross.style.textShadow = '0 0 20px #daa520, 0 0 30px #daa520';
+                setTimeout(() => {
+                    cross.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)';
+                }, 1000);
             });
-        });
+        }, 3000);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5af5ab49bc20f',t:'MTc1OTc1OTIyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5c1ac73b3c20f',t:'MTc1OTc1OTk3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
