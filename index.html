@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Mental e Redes Sociais - Informação e Apoio</title>
+    <title>Bem-Estar Digital - Cuidando da Mente na Era das Redes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
             box-sizing: border-box;
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #4a5568;
+            background: linear-gradient(135deg, #fff9e6 0%, #fef7f0 50%, #f0f8ff 100%);
+            color: #5a5a5a;
         }
 
         .container {
@@ -22,34 +23,120 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
+            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 50%, #fff8dc 100%);
+            padding: 4rem 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .clouds {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            opacity: 0.7;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .cloud:before,
+        .cloud:after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+        }
+
+        .cloud1 {
+            width: 100px;
+            height: 40px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .cloud1:before {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 10px;
+        }
+
+        .cloud1:after {
+            width: 60px;
+            height: 20px;
+            top: -10px;
+            right: 10px;
+        }
+
+        .cloud2 {
+            width: 80px;
+            height: 30px;
+            top: 60%;
+            right: 15%;
+            animation-delay: -10s;
+        }
+
+        .cloud2:before {
+            width: 40px;
+            height: 40px;
+            top: -20px;
+            left: 15px;
+        }
+
+        .cloud2:after {
+            width: 50px;
+            height: 15px;
+            top: -5px;
+            right: 15px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            25% { transform: translateX(10px) translateY(-10px); }
+            50% { transform: translateX(-5px) translateY(5px); }
+            75% { transform: translateX(5px) translateY(-5px); }
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Comfortaa', cursive;
+            font-size: 3.5rem;
             margin: 0;
-            font-weight: 300;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+            background: linear-gradient(45deg, #4682b4, #ff69b4, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            color: #6b7280;
+            font-weight: 300;
+            position: relative;
+            z-index: 10;
         }
 
         nav {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.9);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(135, 206, 235, 0.2);
         }
 
         .nav-links {
@@ -60,16 +147,17 @@
         }
 
         .nav-links a {
-            color: #667eea;
+            color: #87ceeb;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
             transition: all 0.3s ease;
             font-weight: 500;
+            background: rgba(255, 182, 193, 0.1);
         }
 
         .nav-links a:hover {
-            background: #667eea;
+            background: linear-gradient(135deg, #87ceeb, #ffb6c1);
             color: white;
             transform: translateY(-2px);
         }
@@ -79,13 +167,27 @@
             margin: 2rem 0;
         }
 
+        .intro-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .intro-content {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
         .section-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2.5rem;
             margin: 2rem 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.15);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.2);
         }
 
         .section-card:hover {
@@ -93,110 +195,127 @@
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #e2e8f0;
+            color: #4682b4;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #ffb6c1;
             padding-bottom: 0.5rem;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 600;
         }
 
         h3 {
-            color: #764ba2;
-            font-size: 1.4rem;
+            color: #ff69b4;
+            font-size: 1.5rem;
             margin-top: 2rem;
+            font-weight: 500;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 5px solid #ff8a65;
+            background: linear-gradient(135deg, #fff8dc 0%, #ffe4e1 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffd700;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
         }
 
-        .video-grid {
+        .video-grid, .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
-        .video-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .video-card, .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.15);
+            border-top: 4px solid #87ceeb;
+            transition: transform 0.3s ease;
         }
 
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+        .video-card:hover, .news-card:hover {
+            transform: translateY(-3px);
         }
 
-        .news-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid #667eea;
+        .support-section {
+            background: linear-gradient(135deg, #f0f8ff 0%, #fff0f5 100%);
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 3rem 0;
         }
 
         .support-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin: 2rem 0;
         }
 
         .support-card {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease;
         }
 
-        .emergency-card {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-            border: 2px solid #ff6b6b;
+        .support-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .emergency-section {
+            background: rgba(255, 240, 245, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+        }
+
+        .emergency-section h3 {
+            color: #ff69b4;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
         }
 
         .contact-info {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4682b4;
             margin: 0.5rem 0;
         }
 
         .btn {
             display: inline-block;
             padding: 0.8rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 100%);
             color: white;
             text-decoration: none;
             border-radius: 25px;
             transition: all 0.3s ease;
             margin: 0.5rem;
             font-weight: 500;
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
         }
 
-        .btn-emergency {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-        }
-
-        .btn-emergency:hover {
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        .btn-soft {
+            background: linear-gradient(135deg, #ffb6c1 0%, #fff8dc 100%);
+            color: #4682b4;
+            font-size: 0.9rem;
+            padding: 0.6rem 1.5rem;
         }
 
         footer {
-            background: #2d3748;
+            background: linear-gradient(135deg, #87ceeb 0%, #ffb6c1 100%);
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -208,9 +327,19 @@
             margin-bottom: 1rem;
         }
 
+        .gentle-reminder {
+            background: rgba(255, 248, 220, 0.9);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid #ffd700;
+            font-style: italic;
+            color: #6b7280;
+        }
+
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .nav-links {
@@ -219,7 +348,7 @@
                 gap: 1rem;
             }
             
-            .section-card {
+            .section-card, .intro-content {
                 padding: 1.5rem;
             }
         }
@@ -227,189 +356,202 @@
 </head>
 <body>
     <header>
+        <div class="clouds">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+        </div>
         <div class="container">
-            <h1>🧠 Saúde Mental & Redes Sociais</h1>
-            <p class="subtitle">Informação, conscientização e apoio para o bem-estar digital</p>
+            <h1>✨ Mente Serena ✨</h1>
+            <p class="subtitle">Navegando com equilíbrio no mundo digital</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <div class="nav-links">
-                <a href="#conexao">A Conexão</a>
-                <a href="#impactos">Impactos</a>
-                <a href="#videos">Vídeos</a>
-                <a href="#noticias">Notícias</a>
-                <a href="#apoio">Rede de Apoio</a>
-                <a href="#emergencia">Emergência</a>
+                <a href="#inicio">🏠 Início</a>
+                <a href="#conexao">🔗 Conexões</a>
+                <a href="#bem-estar">💙 Bem-Estar</a>
+                <a href="#recursos">📚 Recursos</a>
+                <a href="#apoio">🤝 Apoio</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
+        <section id="inicio" class="intro-section">
+            <div class="intro-content">
+                <h2>🌸 Bem-vindo ao seu espaço de cuidado</h2>
+                <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem;">
+                    Vivemos em uma era digital maravilhosa, cheia de conexões e possibilidades. 
+                    Aqui, vamos explorar juntos como cuidar da nossa mente enquanto navegamos 
+                    pelas redes sociais de forma mais consciente e equilibrada.
+                </p>
+                
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">☁️</div>
+                        <p style="color: #87ceeb; font-weight: 500;">Leveza</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌈</div>
+                        <p style="color: #ff69b4; font-weight: 500;">Equilíbrio</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌟</div>
+                        <p style="color: #ffd700; font-weight: 500;">Bem-estar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="conexao">
             <div class="section-card">
-                <h2>🔗 Como Saúde Mental e Redes Sociais Estão Conectadas</h2>
-                <p>As redes sociais transformaram a forma como nos relacionamos e percebemos o mundo. Embora ofereçam benefícios como conexão e informação, também podem impactar significativamente nossa saúde mental.</p>
+                <h2>🔗 O Mundo Digital e Nossas Emoções</h2>
+                <p>As redes sociais são como janelas para o mundo - nos conectam, inspiram e informam. 
+                Mas às vezes, essas janelas podem distorcer nossa visão da realidade.</p>
                 
                 <div class="highlight-box">
-                    <h3>📊 Dados Importantes:</h3>
+                    <h3>🌱 Reflexões Importantes:</h3>
                     <ul>
-                        <li>Jovens que passam mais de 3 horas diárias em redes sociais têm maior risco de problemas de saúde mental</li>
-                        <li>90% dos adolescentes usam redes sociais regularmente</li>
-                        <li>Comparação social é um dos principais fatores de ansiedade e depressão</li>
+                        <li>Cada pessoa compartilha apenas uma pequena parte de sua vida</li>
+                        <li>Filtros e edições criam versões idealizadas da realidade</li>
+                        <li>Comparações podem afetar nossa autoestima e bem-estar</li>
+                        <li>O tempo que passamos online influencia nosso humor</li>
                     </ul>
                 </div>
 
-                <h3>🎭 O Problema da "Vida Perfeita"</h3>
-                <p>As redes sociais frequentemente apresentam versões idealizadas da realidade, criando padrões inalcançáveis que podem levar a:</p>
-                <ul>
-                    <li><strong>Baixa autoestima:</strong> Comparação constante com outros</li>
-                    <li><strong>Ansiedade social:</strong> Medo de não ser aceito ou "curtido"</li>
-                    <li><strong>Depressão:</strong> Sentimento de inadequação e isolamento</li>
-                    <li><strong>Distúrbios alimentares:</strong> Pressão por padrões de beleza irreais</li>
-                </ul>
+                <h3>🎭 Além da "Vida Perfeita"</h3>
+                <p>É natural admirar as conquistas dos outros, mas lembre-se: por trás de cada foto perfeita, 
+                existe uma pessoa real, com desafios, medos e momentos difíceis como todos nós.</p>
+                
+                <div class="gentle-reminder">
+                    💝 Lembre-se: Sua jornada é única e valiosa, independente do que você vê nas redes sociais.
+                </div>
             </div>
         </section>
 
-        <section id="impactos">
+        <section id="bem-estar">
             <div class="section-card">
-                <h2>⚠️ Principais Impactos na Saúde Mental</h2>
+                <h2>💙 Cuidando do Seu Bem-Estar Digital</h2>
                 
-                <h3>🔄 Ciclo Vicioso da Comparação</h3>
-                <p>O algoritmo das redes sociais é projetado para manter nossa atenção, muitas vezes mostrando conteúdo que pode ser prejudicial ao nosso bem-estar mental.</p>
+                <h3>🌸 Sinais para Prestar Atenção</h3>
+                <p>Nosso corpo e mente nos dão sinais quando precisamos de uma pausa:</p>
+                <ul>
+                    <li>Sentir-se triste ou ansioso após usar as redes</li>
+                    <li>Comparar-se frequentemente com outros</li>
+                    <li>Verificar o celular compulsivamente</li>
+                    <li>Perder sono ou tempo de qualidade com pessoas queridas</li>
+                    <li>Sentir que a vida dos outros é sempre melhor</li>
+                </ul>
 
                 <div class="highlight-box">
-                    <h3>🚨 Sinais de Alerta:</h3>
+                    <h3>🌟 Práticas de Autocuidado Digital</h3>
                     <ul>
-                        <li>Verificar redes sociais compulsivamente</li>
-                        <li>Sentir-se triste ou ansioso após usar as redes</li>
-                        <li>Comparar-se constantemente com outros</li>
-                        <li>Perder sono por causa das redes sociais</li>
-                        <li>Evitar atividades offline</li>
+                        <li><strong>Pausas conscientes:</strong> Reserve momentos sem telas</li>
+                        <li><strong>Curadoria positiva:</strong> Siga contas que te inspiram genuinamente</li>
+                        <li><strong>Tempo de qualidade:</strong> Priorize atividades offline que te fazem bem</li>
+                        <li><strong>Gratidão diária:</strong> Foque no que há de bom na sua vida real</li>
+                        <li><strong>Conexões reais:</strong> Cultive relacionamentos presenciais</li>
                     </ul>
                 </div>
-
-                <h3>💡 Dicas para Uso Saudável</h3>
-                <ul>
-                    <li><strong>Defina limites de tempo:</strong> Use ferramentas de controle parental</li>
-                    <li><strong>Cuide do que consome:</strong> Siga contas que promovem positividade</li>
-                    <li><strong>Pratique o detox digital:</strong> Períodos sem redes sociais</li>
-                    <li><strong>Lembre-se:</strong> As redes mostram apenas uma parte da realidade</li>
-                </ul>
             </div>
         </section>
 
-        <section id="videos">
+        <section id="recursos">
             <div class="section-card">
-                <h2>🎥 Vídeos Educativos</h2>
+                <h2>📚 Recursos para Aprender e Crescer</h2>
+                
+                <h3>🎥 Vídeos Inspiradores</h3>
                 <div class="video-grid">
                     <div class="video-card">
-                        <h3>📱 Como as Redes Sociais Afetam o Cérebro</h3>
-                        <p>Documentário explicando os mecanismos neurológicos por trás do vício em redes sociais.</p>
-                        <a href="https://www.youtube.com/watch?v=NUMa0QkPzns" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                        <h3>🧠 Como as Redes Afetam Nossa Mente</h3>
+                        <p>Uma explicação gentil sobre como nosso cérebro reage às redes sociais.</p>
+                        <a href="https://www.youtube.com/watch?v=NUMa0QkPzns" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
                     </div>
                     <div class="video-card">
-                        <h3>🧘 Mindfulness e Tecnologia</h3>
-                        <p>Técnicas de mindfulness para usar a tecnologia de forma mais consciente.</p>
-                        <a href="https://www.youtube.com/watch?v=wLTQjMVqvQw" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                        <h3>🧘 Mindfulness no Dia a Dia</h3>
+                        <p>Técnicas simples para usar a tecnologia com mais consciência.</p>
+                        <a href="https://www.youtube.com/watch?v=wLTQjMVqvQw" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
                     </div>
                     <div class="video-card">
-                        <h3>👥 Saúde Mental na Era Digital</h3>
-                        <p>Palestra sobre os desafios da saúde mental no mundo digital atual.</p>
-                        <a href="https://www.youtube.com/watch?v=6jMhMVEjEQg" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                        <h3>💚 Bem-Estar na Era Digital</h3>
+                        <p>Conversas sobre como manter o equilíbrio no mundo conectado.</p>
+                        <a href="https://www.youtube.com/watch?v=6jMhMVEjEQg" target="_blank" rel="noopener noreferrer" class="btn">Assistir</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="noticias">
-            <div class="section-card">
-                <h2>📰 Notícias e Artigos Relevantes</h2>
+                <h3>📖 Artigos e Pesquisas</h3>
                 <div class="news-grid">
                     <div class="news-card">
-                        <h3>📊 Pesquisa: Redes Sociais e Ansiedade</h3>
-                        <p>Estudo recente mostra correlação entre uso excessivo de redes sociais e transtornos de ansiedade em jovens.</p>
-                        <a href="https://www.bbc.com/portuguese/articles/c4n1k8zk8z4o" target="_blank" rel="noopener noreferrer" class="btn">Ler Artigo</a>
+                        <h3>🔍 Pesquisas sobre Bem-Estar Digital</h3>
+                        <p>Estudos recentes sobre o impacto das redes sociais no bem-estar emocional.</p>
+                        <a href="https://www.bbc.com/portuguese/articles/c4n1k8zk8z4o" target="_blank" rel="noopener noreferrer" class="btn">Ler Mais</a>
                     </div>
                     <div class="news-card">
-                        <h3>🏥 OMS Reconhece Vício em Internet</h3>
-                        <p>Organização Mundial da Saúde inclui transtorno de jogos online na lista de doenças mentais.</p>
-                        <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank" rel="noopener noreferrer" class="btn">Ler no Site da OMS</a>
+                        <h3>🌍 Saúde Mental Global</h3>
+                        <p>Informações da OMS sobre saúde mental na era digital.</p>
+                        <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank" rel="noopener noreferrer" class="btn">Explorar</a>
                     </div>
                     <div class="news-card">
-                        <h3>🇧🇷 Saúde Mental no Brasil</h3>
-                        <p>Dados sobre saúde mental no Brasil e o impacto das redes sociais na população jovem.</p>
-                        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-mental" target="_blank" rel="noopener noreferrer" class="btn">Portal do Ministério da Saúde</a>
+                        <h3>🇧🇷 Recursos Nacionais</h3>
+                        <p>Informações sobre saúde mental e bem-estar no Brasil.</p>
+                        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-mental" target="_blank" rel="noopener noreferrer" class="btn">Conhecer</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="apoio">
-            <div class="section-card">
-                <h2>🤝 Rede de Apoio e Suporte</h2>
+            <div class="support-section">
+                <h2>🤝 Rede de Cuidado e Apoio</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;">
+                    Às vezes, todos precisamos de uma mão amiga. Aqui estão alguns recursos gentis para quando você precisar de apoio.
+                </p>
+                
                 <div class="support-grid">
                     <div class="support-card">
                         <div class="icon">💬</div>
-                        <h3>Centro de Valorização da Vida (CVV)</h3>
-                        <div class="contact-info">📞 188</div>
-                        <p>Apoio emocional e prevenção do suicídio. Atendimento gratuito 24h.</p>
-                        <a href="https://www.cvv.org.br" target="_blank" rel="noopener noreferrer" class="btn">Site Oficial</a>
+                        <h3>Conversa Acolhedora</h3>
+                        <div class="contact-info">CVV - 188</div>
+                        <p>Apoio emocional gratuito, 24 horas, todos os dias.</p>
+                        <a href="https://www.cvv.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Conhecer</a>
                     </div>
                     <div class="support-card">
                         <div class="icon">🏥</div>
-                        <h3>CAPS - Centro de Atenção Psicossocial</h3>
-                        <div class="contact-info">📞 136</div>
-                        <p>Atendimento público especializado em saúde mental.</p>
-                        <a href="https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/caps" target="_blank" rel="noopener noreferrer" class="btn">Encontrar CAPS</a>
+                        <h3>Cuidado Profissional</h3>
+                        <div class="contact-info">CAPS - 136</div>
+                        <p>Centros especializados em cuidado psicológico.</p>
+                        <a href="https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/caps" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Localizar</a>
                     </div>
                     <div class="support-card">
-                        <div class="icon">👨‍⚕️</div>
-                        <h3>Mapa da Saúde Mental</h3>
-                        <p>Encontre profissionais e serviços de saúde mental na sua região.</p>
-                        <a href="https://www.mapadasaudemental.com.br" target="_blank" rel="noopener noreferrer" class="btn">Acessar Mapa</a>
+                        <div class="icon">🗺️</div>
+                        <h3>Encontrar Ajuda</h3>
+                        <p>Mapa com profissionais e serviços na sua região.</p>
+                        <a href="https://www.mapadasaudemental.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Explorar</a>
                     </div>
                     <div class="support-card">
-                        <div class="icon">💙</div>
+                        <div class="icon">💛</div>
                         <h3>Setembro Amarelo</h3>
-                        <p>Campanha de prevenção ao suicídio com recursos e informações.</p>
-                        <a href="https://www.setembroamarelo.com" target="_blank" rel="noopener noreferrer" class="btn">Saiba Mais</a>
+                        <p>Recursos e informações sobre prevenção e cuidado.</p>
+                        <a href="https://www.setembroamarelo.com" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Visitar</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="emergencia">
-            <div class="section-card">
-                <h2>🚨 Em Situação de Emergência</h2>
-                <div class="support-grid">
-                    <div class="support-card emergency-card">
-                        <div class="icon">🆘</div>
-                        <h3>SAMU - Emergências Médicas</h3>
-                        <div class="contact-info">📞 192</div>
-                        <p>Para emergências médicas graves, incluindo crises de saúde mental.</p>
-                        <a href="tel:192" class="btn btn-emergency">Ligar Agora</a>
+                <div class="emergency-section">
+                    <h3>🌸 Em Momentos Difíceis</h3>
+                    <p>Se você está passando por um momento muito difícil, saiba que não está sozinho. 
+                    Existem pessoas preparadas para ajudar:</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                        <div style="text-align: center;">
+                            <div class="contact-info">💙 CVV: 188</div>
+                            <p style="font-size: 0.9rem; color: #6b7280;">Conversa acolhedora</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="contact-info">🏥 SAMU: 192</div>
+                            <p style="font-size: 0.9rem; color: #6b7280;">Emergências médicas</p>
+                        </div>
                     </div>
-                    <div class="support-card emergency-card">
-                        <div class="icon">🚔</div>
-                        <h3>Polícia Militar</h3>
-                        <div class="contact-info">📞 190</div>
-                        <p>Para situações de risco imediato à segurança.</p>
-                        <a href="tel:190" class="btn btn-emergency">Ligar Agora</a>
-                    </div>
-                    <div class="support-card emergency-card">
-                        <div class="icon">💙</div>
-                        <h3>CVV - Crise Emocional</h3>
-                        <div class="contact-info">📞 188</div>
-                        <p>Apoio imediato em crises emocionais e pensamentos suicidas.</p>
-                        <a href="tel:188" class="btn btn-emergency">Ligar Agora</a>
-                    </div>
-                </div>
-                
-                <div class="highlight-box">
-                    <h3>⚠️ Lembre-se:</h3>
-                    <p><strong>Se você ou alguém que conhece está em risco imediato, não hesite em buscar ajuda profissional. Sua vida é valiosa e existem pessoas dispostas a ajudar.</strong></p>
                 </div>
             </div>
         </section>
@@ -417,8 +559,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 - Site Educativo sobre Saúde Mental e Redes Sociais</p>
-            <p>Este site tem fins informativos e não substitui acompanhamento profissional.</p>
+            <p>💝 Feito com carinho para promover bem-estar digital</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">Este site oferece informações educativas e não substitui acompanhamento profissional.</p>
         </div>
     </footer>
 
@@ -439,20 +581,28 @@
 
         // Animação suave ao carregar a página
         window.addEventListener('load', function() {
-            document.querySelectorAll('.section-card').forEach((card, index) => {
+            document.querySelectorAll('.section-card, .intro-content').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.8s ease';
+                
                 setTimeout(() => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    card.style.transition = 'all 0.6s ease';
-                    
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 200);
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 300);
+            });
+        });
+
+        // Efeito parallax suave nas nuvens
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const clouds = document.querySelectorAll('.cloud');
+            clouds.forEach((cloud, index) => {
+                const speed = 0.5 + (index * 0.2);
+                cloud.style.transform = `translateY(${scrolled * speed}px)`;
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5a1f094dac20f',t:'MTc1OTc1ODY3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5af5ab49bc20f',t:'MTc1OTc1OTIyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
