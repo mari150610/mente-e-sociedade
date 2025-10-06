@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santos e Santas - Guia Completo dos Bem-Aventurados</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Igreja Católica Apostólica Romana - Guia Completo da Fé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
             box-sizing: border-box;
-            font-family: 'Crimson Text', serif;
-            line-height: 1.7;
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #2c1810 0%, #8b4513 30%, #daa520 100%);
-            color: #2c1810;
+            background: linear-gradient(135deg, #fff9e6 0%, #fef5e7 50%, #fdf2e9 100%);
+            color: #8b6914;
             min-height: 100vh;
         }
 
@@ -24,12 +24,13 @@
         }
 
         header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #daa520;
-            padding: 3rem 0;
+            background: linear-gradient(135deg, #f9f1c4 0%, #f5e6a3 50%, #f0d982 100%);
+            color: #8b6914;
+            padding: 4rem 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+            border-bottom: 3px solid #e6cc5a;
         }
 
         header::before {
@@ -39,70 +40,74 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cross" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 0v20M0 10h20" stroke="%23daa520" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23cross)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cross" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="%23e6cc5a" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23cross)"/></svg>');
+            opacity: 0.4;
         }
 
         h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 3.2rem;
             margin: 0;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(139, 105, 20, 0.2);
             position: relative;
             z-index: 10;
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-top: 1rem;
-            opacity: 0.9;
-            font-style: italic;
+            opacity: 0.8;
+            font-weight: 400;
             position: relative;
             z-index: 10;
         }
 
         .cross-decoration {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin: 1rem 0;
-            color: #daa520;
+            color: #d4af37;
             position: relative;
             z-index: 10;
+            font-weight: 300;
         }
 
         nav {
-            background: rgba(218, 165, 32, 0.95);
+            background: rgba(249, 241, 196, 0.95);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 15px rgba(139, 105, 20, 0.1);
+            border-bottom: 1px solid #e6cc5a;
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: #1a1a2e;
+            color: #8b6914;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
             transition: all 0.3s ease;
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.2);
-            font-family: 'Cinzel', serif;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.6);
+            font-family: 'Quicksand', sans-serif;
+            border: 1px solid rgba(230, 204, 90, 0.3);
+            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
-            background: #1a1a2e;
-            color: #daa520;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            background: #f0d982;
+            color: #6b5011;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(139, 105, 20, 0.2);
         }
 
         section {
@@ -111,150 +116,159 @@
         }
 
         .intro-section {
-            background: rgba(255, 248, 220, 0.95);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
             padding: 3rem;
             margin: 3rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(139, 105, 20, 0.1);
             text-align: center;
-            border: 2px solid #daa520;
+            border: 2px solid #f0d982;
         }
 
         .section-card {
-            background: rgba(255, 248, 220, 0.95);
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
             padding: 2.5rem;
             margin: 2rem 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(139, 105, 20, 0.08);
             transition: transform 0.3s ease;
-            border-left: 5px solid #8b4513;
+            border-left: 4px solid #e6cc5a;
         }
 
         .section-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         h2 {
-            color: #8b4513;
-            font-size: 2.5rem;
+            color: #8b6914;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            border-bottom: 3px solid #daa520;
-            padding-bottom: 0.5rem;
-            font-family: 'Cinzel', serif;
+            border-bottom: 2px solid #f0d982;
+            padding-bottom: 0.8rem;
+            font-family: 'Quicksand', sans-serif;
             font-weight: 600;
             text-align: center;
         }
 
         h3 {
-            color: #1a1a2e;
-            font-size: 1.6rem;
+            color: #6b5011;
+            font-size: 1.4rem;
             margin-top: 2rem;
-            font-weight: 600;
-            font-family: 'Cinzel', serif;
+            font-weight: 500;
+            font-family: 'Quicksand', sans-serif;
         }
 
-        .saints-grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
-        .saint-card {
+        .card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            border-top: 4px solid #8b4513;
+            box-shadow: 0 3px 15px rgba(139, 105, 20, 0.08);
+            border-top: 3px solid #f0d982;
             transition: all 0.3s ease;
             position: relative;
+            border: 1px solid rgba(230, 204, 90, 0.2);
         }
 
-        .saint-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 105, 20, 0.12);
         }
 
-        .saint-card::before {
-            content: '✝';
+        .card::before {
+            content: '';
             position: absolute;
-            top: -10px;
+            top: -8px;
             right: 15px;
-            background: #daa520;
-            color: white;
-            width: 30px;
-            height: 30px;
+            background: #f0d982;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(139, 105, 20, 0.2);
         }
 
-        .saint-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
+        .card-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.3rem;
             font-weight: 600;
-            color: #8b4513;
+            color: #8b6914;
             margin-bottom: 0.5rem;
         }
 
-        .saint-title {
+        .card-subtitle {
             font-style: italic;
-            color: #1a1a2e;
+            color: #a67c00;
             margin-bottom: 1rem;
-            font-weight: 500;
+            font-weight: 400;
+            font-size: 0.95rem;
         }
 
-        .saint-date {
-            background: #daa520;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
+        .card-date {
+            background: #f0d982;
+            color: #6b5011;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             display: inline-block;
             margin-bottom: 1rem;
             font-weight: 500;
         }
 
-        .saint-description {
-            color: #2c1810;
+        .card-description {
+            color: #8b6914;
             line-height: 1.6;
             margin-bottom: 1rem;
+            font-size: 0.95rem;
         }
 
-        .saint-patronage {
-            background: rgba(218, 165, 32, 0.1);
+        .card-info {
+            background: rgba(240, 217, 130, 0.2);
             padding: 1rem;
-            border-radius: 10px;
-            border-left: 3px solid #daa520;
+            border-radius: 15px;
+            border-left: 3px solid #f0d982;
             margin-top: 1rem;
         }
 
         .category-header {
             text-align: center;
             margin: 3rem 0 2rem 0;
-            padding: 2rem;
-            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
-            color: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f9f1c4 0%, #f0d982 100%);
+            color: #8b6914;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(139, 105, 20, 0.1);
+            border: 2px solid #e6cc5a;
         }
 
         .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem auto;
+            background: #f0d982;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #6b5011;
+            box-shadow: 0 3px 10px rgba(139, 105, 20, 0.2);
         }
 
         .prayer-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #daa520;
+            background: linear-gradient(135deg, #f5e6a3 0%, #f0d982 100%);
+            color: #6b5011;
             padding: 3rem;
-            border-radius: 20px;
+            border-radius: 25px;
             margin: 3rem 0;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 20px rgba(139, 105, 20, 0.15);
+            border: 2px solid #e6cc5a;
         }
 
         .prayer-text {
@@ -266,56 +280,105 @@
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
-            color: white;
+            padding: 0.7rem 1.8rem;
+            background: linear-gradient(135deg, #f0d982 0%, #e6cc5a 100%);
+            color: #6b5011;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 20px;
             transition: all 0.3s ease;
             margin: 0.5rem;
-            font-weight: 600;
-            font-family: 'Cinzel', serif;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: 500;
+            font-family: 'Quicksand', sans-serif;
+            box-shadow: 0 3px 10px rgba(139, 105, 20, 0.2);
+            border: 1px solid #d4af37;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(139, 105, 20, 0.25);
+            background: linear-gradient(135deg, #e6cc5a 0%, #d4af37 100%);
         }
 
         footer {
-            background: #1a1a2e;
-            color: #daa520;
+            background: linear-gradient(135deg, #f5e6a3 0%, #f0d982 100%);
+            color: #8b6914;
             text-align: center;
             padding: 3rem 0;
             margin-top: 3rem;
+            border-top: 2px solid #e6cc5a;
         }
 
         .highlight-box {
-            background: rgba(218, 165, 32, 0.1);
+            background: rgba(240, 217, 130, 0.2);
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 20px;
             margin: 2rem 0;
-            border: 2px solid #daa520;
+            border: 2px solid #f0d982;
             text-align: center;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            margin: 0.5rem;
+            border: 2px solid #8b6914;
+            vertical-align: middle;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 15px;
+            border-left: 4px solid #f0d982;
+            box-shadow: 0 3px 10px rgba(139, 105, 20, 0.08);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #8b6914;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .exam-question {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 15px;
+            border-left: 4px solid #f0d982;
+            box-shadow: 0 3px 10px rgba(139, 105, 20, 0.08);
+        }
+
+        .exam-category {
+            font-weight: 600;
+            color: #8b6914;
+            margin-bottom: 0.5rem;
+            font-family: 'Quicksand', sans-serif;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .nav-links {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
+                gap: 0.8rem;
             }
             
             .section-card, .intro-section {
                 padding: 1.5rem;
             }
             
-            .saints-grid {
+            .grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -324,394 +387,660 @@
 <body>
     <header>
         <div class="container">
-            <h1>⛪ Santos e Santas</h1>
-            <div class="cross-decoration">✠ ✠ ✠</div>
-            <p class="subtitle">Guia Completo dos Bem-Aventurados da Igreja Católica</p>
+            <h1>Igreja Católica Apostólica Romana</h1>
+            <div class="cross-decoration">+ + +</div>
+            <p class="subtitle">Guia Completo da Fé, Tradições e Santos da Santa Igreja</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <div class="nav-links">
-                <a href="#inicio">🏛️ Início</a>
-                <a href="#apostolos">✝️ Apóstolos</a>
-                <a href="#martires">🕊️ Mártires</a>
-                <a href="#doutores">📚 Doutores</a>
-                <a href="#fundadores">⛪ Fundadores</a>
-                <a href="#misticos">🌟 Místicos</a>
-                <a href="#oracao">🙏 Oração</a>
+                <a href="#inicio">Início</a>
+                <a href="#historia">História</a>
+                <a href="#liturgia">Liturgia</a>
+                <a href="#tradicoes">Tradições</a>
+                <a href="#santos">Santos</a>
+                <a href="#marianos">Títulos Marianos</a>
+                <a href="#exame">Exame de Consciência</a>
+                <a href="#calendario">Calendário</a>
+                <a href="#oracao">Oração</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <section id="inicio" class="intro-section">
-            <h2>🕊️ Bem-vindos ao Santuário Digital</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
-                Explore a vida e os ensinamentos dos santos e santas que iluminaram o caminho da fé 
-                ao longo dos séculos. Cada um deles nos deixou um legado de amor, dedicação e santidade.
+            <h2>Bem-vindos à Santa Igreja</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Explore a riqueza da fé católica através de sua história milenar, tradições sagradas, 
+                liturgia solene e os santos que nos inspiram na jornada espiritual.
             </p>
             
             <div class="highlight-box">
-                <h3>✨ O que você encontrará aqui:</h3>
-                <p>Biografias detalhadas, datas comemorativas, patronatos, orações e ensinamentos 
-                dos bem-aventurados que nos inspiram na jornada espiritual.</p>
+                <h3>Una, Santa, Católica e Apostólica</h3>
+                <p>Descubra os tesouros da Igreja fundada por Jesus Cristo, 
+                transmitida pelos Apóstolos e preservada através dos séculos.</p>
             </div>
         </section>
 
-        <section id="apostolos">
+        <section id="historia">
             <div class="category-header">
-                <div class="category-icon">✝️</div>
-                <h2>Os Santos Apóstolos</h2>
-                <p>Os doze escolhidos por Jesus Cristo para espalhar Sua palavra pelo mundo</p>
+                <div class="category-icon">◊</div>
+                <h2>História da Igreja Católica</h2>
+                <p>Dois mil anos de fé, tradição e evangelização</p>
             </div>
 
-            <div class="saints-grid">
-                <div class="saint-card">
-                    <div class="saint-name">São Pedro</div>
-                    <div class="saint-title">Príncipe dos Apóstolos, Primeiro Papa</div>
-                    <div class="saint-date">29 de Junho</div>
-                    <div class="saint-description">
-                        Simão Pedro, pescador de Betsaida, foi escolhido por Jesus para ser a pedra 
-                        fundamental da Igreja. Apesar de suas fraquezas humanas, tornou-se o líder 
-                        dos apóstolos e primeiro Papa da Igreja Católica.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Pescadores, Porteiros, Igreja Universal
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">33 d.C. - Pentecostes</div>
+                    <div class="card-description">
+                        Nascimento da Igreja com a descida do Espírito Santo sobre os Apóstolos. 
+                        São Pedro profere o primeiro sermão cristão, convertendo cerca de 3.000 pessoas.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Paulo</div>
-                    <div class="saint-title">Apóstolo dos Gentios</div>
-                    <div class="saint-date">29 de Junho</div>
-                    <div class="saint-description">
-                        Saulo de Tarso, perseguidor dos cristãos, converteu-se após uma visão de Cristo 
-                        no caminho de Damasco. Tornou-se o grande missionário do cristianismo, 
-                        levando o Evangelho aos povos gentios.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Missionários, Escritores, Jornalistas
+                <div class="timeline-item">
+                    <div class="timeline-date">64-67 d.C. - Martírio dos Apóstolos</div>
+                    <div class="card-description">
+                        Martírio de São Pedro e São Paulo em Roma durante a perseguição de Nero. 
+                        Estabelecimento definitivo da sede papal em Roma.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São João Evangelista</div>
-                    <div class="saint-title">O Discípulo Amado</div>
-                    <div class="saint-date">27 de Dezembro</div>
-                    <div class="saint-description">
-                        O mais jovem dos apóstolos, conhecido como "o discípulo que Jesus amava". 
-                        Autor do quarto Evangelho, das três epístolas e do Apocalipse. 
-                        Único apóstolo que não morreu mártir.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Escritores, Teólogos, Editores
+                <div class="timeline-item">
+                    <div class="timeline-date">313 d.C. - Édito de Milão</div>
+                    <div class="card-description">
+                        Imperador Constantino concede liberdade religiosa aos cristãos. 
+                        Fim das perseguições sistemáticas e início da era constantiniana.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Tiago Maior</div>
-                    <div class="saint-title">Santiago de Compostela</div>
-                    <div class="saint-date">25 de Julho</div>
-                    <div class="saint-description">
-                        Irmão de São João, foi um dos três apóstolos mais próximos de Jesus. 
-                        Pregou na Espanha e foi martirizado por Herodes Agripa. 
-                        Seu túmulo em Compostela é destino de peregrinação mundial.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Espanha, Peregrinos, Cavaleiros
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="martires">
-            <div class="category-header">
-                <div class="category-icon">🕊️</div>
-                <h2>Santos Mártires</h2>
-                <p>Aqueles que deram suas vidas pela fé cristã</p>
-            </div>
-
-            <div class="saints-grid">
-                <div class="saint-card">
-                    <div class="saint-name">Santo Estêvão</div>
-                    <div class="saint-title">Primeiro Mártir Cristão</div>
-                    <div class="saint-date">26 de Dezembro</div>
-                    <div class="saint-description">
-                        Primeiro diácono e primeiro mártir da Igreja. Foi apedrejado por pregar 
-                        sobre Jesus Cristo. Suas últimas palavras foram de perdão para seus 
-                        executores, seguindo o exemplo de Cristo.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Diáconos, Pedreiros, Cavalos
+                <div class="timeline-item">
+                    <div class="timeline-date">325 d.C. - Concílio de Niceia</div>
+                    <div class="card-description">
+                        Primeiro Concílio Ecumênico define a divindade de Cristo contra o arianismo. 
+                        Formulação do Credo Niceno.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">Santa Águeda</div>
-                    <div class="saint-title">Virgem e Mártir</div>
-                    <div class="saint-date">5 de Fevereiro</div>
-                    <div class="saint-description">
-                        Jovem siciliana que consagrou sua virgindade a Cristo. Sofreu torturas 
-                        terríveis por recusar-se a renunciar à fé e casar-se com um pagão. 
-                        É invocada contra terremotos e erupções vulcânicas.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrona de:</strong> Enfermeiras, Sicília, Contra desastres naturais
+                <div class="timeline-item">
+                    <div class="timeline-date">1054 - Grande Cisma</div>
+                    <div class="card-description">
+                        Separação entre Igreja Católica Romana e Igreja Ortodoxa Oriental. 
+                        Questões de autoridade papal e diferenças teológicas.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Sebastião</div>
-                    <div class="saint-title">Soldado Mártir</div>
-                    <div class="saint-date">20 de Janeiro</div>
-                    <div class="saint-description">
-                        Soldado romano que se converteu ao cristianismo. Foi descoberto e 
-                        condenado a morrer flechado. Sobreviveu milagrosamente, mas foi 
-                        posteriormente martirizado. É invocado contra pestes e epidemias.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Soldados, Atletas, Contra epidemias
+                <div class="timeline-item">
+                    <div class="timeline-date">1517 - Reforma Protestante</div>
+                    <div class="card-description">
+                        Martinho Lutero publica as 95 Teses. Início da Reforma Protestante 
+                        e posterior Contrarreforma Católica.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">Santa Cecília</div>
-                    <div class="saint-title">Virgem e Mártir</div>
-                    <div class="saint-date">22 de Novembro</div>
-                    <div class="saint-description">
-                        Nobre romana que consagrou sua virgindade a Deus. Converteu seu esposo 
-                        e cunhado ao cristianismo. Foi martirizada por sua fé. 
-                        Segundo a tradição, cantava louvores a Deus durante seu martírio.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrona de:</strong> Músicos, Cantores, Instrumentistas
+                <div class="timeline-item">
+                    <div class="timeline-date">1962-1965 - Concílio Vaticano II</div>
+                    <div class="card-description">
+                        Concílio de renovação da Igreja. Liturgia em vernáculo, 
+                        ecumenismo e abertura ao mundo moderno.
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="doutores">
+        <section id="liturgia">
             <div class="category-header">
-                <div class="category-icon">📚</div>
-                <h2>Doutores da Igreja</h2>
-                <p>Santos reconhecidos por sua contribuição teológica excepcional</p>
+                <div class="category-icon">※</div>
+                <h2>Liturgia e Objetos Sagrados</h2>
+                <p>A oração oficial da Igreja e seus elementos sagrados</p>
             </div>
 
-            <div class="saints-grid">
-                <div class="saint-card">
-                    <div class="saint-name">Santo Agostinho</div>
-                    <div class="saint-title">Doutor da Graça</div>
-                    <div class="saint-date">28 de Agosto</div>
-                    <div class="saint-description">
-                        Bispo de Hipona, filósofo e teólogo. Após uma juventude dissoluta, 
-                        converteu-se e tornou-se um dos maiores pensadores cristãos. 
-                        Autor de "Confissões" e "A Cidade de Deus".
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Teólogos, Filósofos, Cervejeiros
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">Vestes Litúrgicas</div>
+                    <div class="card-description">
+                        <strong>Alva:</strong> Túnica branca que simboliza a pureza batismal.<br>
+                        <strong>Casula:</strong> Veste principal do sacerdote na Missa.<br>
+                        <strong>Estola:</strong> Símbolo do poder sacerdotal.<br>
+                        <strong>Dalmática:</strong> Veste própria do diácono.<br>
+                        <strong>Pluvial:</strong> Capa usada em procissões e bênçãos.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Tomás de Aquino</div>
-                    <div class="saint-title">Doutor Angélico</div>
-                    <div class="saint-date">28 de Janeiro</div>
-                    <div class="saint-description">
-                        Frade dominicano, filósofo e teólogo. Criou a síntese entre a filosofia 
-                        aristotélica e a doutrina cristã. Autor da "Suma Teológica", 
-                        obra fundamental da teologia católica.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Estudantes, Universidades, Filósofos
+                <div class="card">
+                    <div class="card-title">Objetos do Altar</div>
+                    <div class="card-description">
+                        <strong>Cálice:</strong> Taça para o Sangue de Cristo.<br>
+                        <strong>Patena:</strong> Prato para o Corpo de Cristo.<br>
+                        <strong>Âmbula:</strong> Recipiente para as hóstias consagradas.<br>
+                        <strong>Corporal:</strong> Pano sobre o qual se colocam o cálice e patena.<br>
+                        <strong>Purificatório:</strong> Pano para purificar os vasos sagrados.
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">Santa Teresa de Ávila</div>
-                    <div class="saint-title">Doutora da Igreja</div>
-                    <div class="saint-date">15 de Outubro</div>
-                    <div class="saint-description">
-                        Carmelita espanhola, mística e reformadora. Fundou numerosos conventos 
-                        e reformou a Ordem do Carmo. Suas obras sobre vida espiritual são 
-                        clássicos da literatura mística cristã.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrona de:</strong> Espanha, Escritores espirituais, Carmelitas
+                <div class="card">
+                    <div class="card-title">Cores Litúrgicas</div>
+                    <div class="card-description">
+                        <span class="color-box" style="background: white;"></span> <strong>Branco:</strong> Natal, Páscoa, festas de Cristo e Maria<br>
+                        <span class="color-box" style="background: red;"></span> <strong>Vermelho:</strong> Paixão, Pentecostes, mártires<br>
+                        <span class="color-box" style="background: green;"></span> <strong>Verde:</strong> Tempo Comum<br>
+                        <span class="color-box" style="background: purple;"></span> <strong>Roxo:</strong> Advento, Quaresma<br>
+                        <span class="color-box" style="background: pink;"></span> <strong>Rosa:</strong> 3º domingo do Advento e 4º da Quaresma
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São João Crisóstomo</div>
-                    <div class="saint-title">Boca de Ouro</div>
-                    <div class="saint-date">13 de Setembro</div>
-                    <div class="saint-description">
-                        Arcebispo de Constantinopla, famoso por sua eloquência na pregação. 
-                        Seus sermões eram tão belos que recebeu o título de "Crisóstomo" 
-                        (boca de ouro). Grande reformador da Igreja Oriental.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Pregadores, Oradores, Igreja Oriental
+                <div class="card">
+                    <div class="card-title">Ritos da Igreja</div>
+                    <div class="card-description">
+                        <strong>Rito Romano:</strong> Rito principal da Igreja Latina.<br>
+                        <strong>Rito Ambrosiano:</strong> Usado em Milão e arredores.<br>
+                        <strong>Rito Bizantino:</strong> Igrejas Católicas Orientais.<br>
+                        <strong>Rito Maronita:</strong> Igreja Católica Maronita do Líbano.<br>
+                        <strong>Forma Extraordinária:</strong> Missa Tridentina em latim.
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="fundadores">
+        <section id="tradicoes">
             <div class="category-header">
-                <div class="category-icon">⛪</div>
-                <h2>Santos Fundadores</h2>
-                <p>Fundadores de ordens religiosas e movimentos espirituais</p>
+                <div class="category-icon">✧</div>
+                <h2>Tradições Católicas</h2>
+                <p>Práticas e devoções transmitidas através dos séculos</p>
             </div>
 
-            <div class="saints-grid">
-                <div class="saint-card">
-                    <div class="saint-name">São Bento</div>
-                    <div class="saint-title">Pai do Monasticismo Ocidental</div>
-                    <div class="saint-date">11 de Julho</div>
-                    <div class="saint-description">
-                        Fundador da Ordem Beneditina e autor da Regra de São Bento. 
-                        Estabeleceu os princípios do monasticismo ocidental com o lema 
-                        "Ora et Labora" (Reza e Trabalha). Patrono da Europa.
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">Santo Rosário</div>
+                    <div class="card-description">
+                        Oração contemplativa dos mistérios da vida de Jesus e Maria. 
+                        Composto por 150 Ave-Marias divididas em 15 dezenas, 
+                        meditando os Mistérios Gozosos, Dolorosos, Gloriosos e Luminosos.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Europa, Monges, Estudantes
+                    <div class="card-info">
+                        <strong>Origem:</strong> Tradição atribuída a São Domingos de Gusmão
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Francisco de Assis</div>
-                    <div class="saint-title">Poverello de Assis</div>
-                    <div class="saint-date">4 de Outubro</div>
-                    <div class="saint-description">
-                        Fundador da Ordem Franciscana. Renunciou às riquezas para viver em 
-                        pobreza absoluta, pregando o Evangelho. Recebeu os estigmas de Cristo. 
-                        Grande amante da natureza e da paz.
+                <div class="card">
+                    <div class="card-title">Via Sacra</div>
+                    <div class="card-description">
+                        Devoção que acompanha Jesus em seu caminho para o Calvário. 
+                        Tradicionalmente composta por 14 estações, desde a condenação 
+                        até a sepultura de Cristo.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Itália, Ecologistas, Animais
+                    <div class="card-info">
+                        <strong>Prática:</strong> Especialmente durante a Quaresma e Sexta-feira Santa
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">Santo Inácio de Loyola</div>
-                    <div class="saint-title">Fundador da Companhia de Jesus</div>
-                    <div class="saint-date">31 de Julho</div>
-                    <div class="saint-description">
-                        Soldado espanhol que se converteu após ser ferido em batalha. 
-                        Fundou a Companhia de Jesus (Jesuítas) e criou os "Exercícios Espirituais". 
-                        Grande missionário e educador.
+                <div class="card">
+                    <div class="card-title">Adoração Eucarística</div>
+                    <div class="card-description">
+                        Oração silenciosa diante do Santíssimo Sacramento exposto. 
+                        Momento de intimidade com Jesus presente na Eucaristia, 
+                        fortalecendo a fé e a vida espiritual.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Jesuítas, Soldados, Exercícios espirituais
+                    <div class="card-info">
+                        <strong>Duração:</strong> Pode ser perpétua, por horas ou momentos específicos
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Domingos de Gusmão</div>
-                    <div class="saint-title">Fundador da Ordem dos Pregadores</div>
-                    <div class="saint-date">8 de Agosto</div>
-                    <div class="saint-description">
-                        Sacerdote espanhol que fundou a Ordem Dominicana para combater as heresias 
-                        através da pregação e do estudo. Promoveu a devoção ao Santo Rosário. 
-                        Grande defensor da ortodoxia católica.
+                <div class="card">
+                    <div class="card-title">Novenas</div>
+                    <div class="card-description">
+                        Orações realizadas durante nove dias consecutivos, 
+                        inspiradas nos nove dias que os Apóstolos oraram 
+                        entre a Ascensão e Pentecostes.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Dominicanos, Pregadores, Astronomos
+                    <div class="card-info">
+                        <strong>Tipos:</strong> Novenas a santos, Nossa Senhora, Espírito Santo
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Jejum e Abstinência</div>
+                    <div class="card-description">
+                        Práticas penitenciais que fortalecem o espírito. 
+                        Jejum nas Cinzas e Sexta-feira Santa. 
+                        Abstinência de carne nas sextas-feiras da Quaresma.
+                    </div>
+                    <div class="card-info">
+                        <strong>Finalidade:</strong> Conversão, penitência e solidariedade
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Peregrinações</div>
+                    <div class="card-description">
+                        Jornadas espirituais a lugares santos como Roma, 
+                        Jerusalém, Santiago de Compostela, Fátima, Lourdes 
+                        e Aparecida, buscando graças e renovação espiritual.
+                    </div>
+                    <div class="card-info">
+                        <strong>Benefício:</strong> Indulgências e crescimento espiritual
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="misticos">
+        <section id="santos">
             <div class="category-header">
-                <div class="category-icon">🌟</div>
-                <h2>Santos Místicos</h2>
-                <p>Santos que experimentaram união especial com Deus</p>
+                <div class="category-icon">+</div>
+                <h2>Santos Padroeiros das Pastorais</h2>
+                <p>Intercessores especiais para os ministérios da Igreja</p>
             </div>
 
-            <div class="saints-grid">
-                <div class="saint-card">
-                    <div class="saint-name">São João da Cruz</div>
-                    <div class="saint-title">Doutor Místico</div>
-                    <div class="saint-date">14 de Dezembro</div>
-                    <div class="saint-description">
-                        Carmelita espanhol, poeta e místico. Colaborou com Santa Teresa na 
-                        reforma do Carmelo. Autor de obras clássicas sobre a vida mística, 
-                        incluindo "Noite Escura da Alma" e "Cântico Espiritual".
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">São João Bosco</div>
+                    <div class="card-subtitle">Patrono da Pastoral da Juventude</div>
+                    <div class="card-date">31 de Janeiro</div>
+                    <div class="card-description">
+                        Sacerdote italiano dedicado à educação e evangelização dos jovens. 
+                        Fundou os Salesianos e desenvolveu o "Sistema Preventivo" 
+                        baseado na razão, religião e bondade.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Poetas místicos, Carmelitas, Contemplatives
-                    </div>
-                </div>
-
-                <div class="saint-card">
-                    <div class="saint-name">Santa Catarina de Siena</div>
-                    <div class="saint-title">Doutora da Igreja</div>
-                    <div class="saint-date">29 de Abril</div>
-                    <div class="saint-description">
-                        Terciária dominicana, mística e doutora da Igreja. Teve visões místicas 
-                        desde jovem e recebeu os estigmas invisíveis. Influenciou papas e 
-                        governantes, contribuindo para o fim do Cisma do Ocidente.
-                    </div>
-                    <div class="saint-patronage">
-                        <strong>Patrona de:</strong> Itália, Europa, Enfermeiras
+                    <div class="card-info">
+                        <strong>Patrono de:</strong> Jovens, Educadores, Editores
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">Santa Faustina</div>
-                    <div class="saint-title">Apóstola da Divina Misericórdia</div>
-                    <div class="saint-date">5 de Outubro</div>
-                    <div class="saint-description">
-                        Religiosa polaca que recebeu visões de Jesus Cristo, que lhe pediu 
-                        para promover a devoção à Divina Misericórdia. Escreveu um diário 
-                        espiritual com mais de 600 páginas sobre suas experiências místicas.
+                <div class="card">
+                    <div class="card-title">Santa Mônica</div>
+                    <div class="card-subtitle">Patrona da Pastoral Familiar</div>
+                    <div class="card-date">27 de Agosto</div>
+                    <div class="card-description">
+                        Mãe de Santo Agostinho, exemplo de perseverança na oração 
+                        pela conversão da família. Suas lágrimas e orações 
+                        alcançaram a conversão do filho.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrona de:</strong> Divina Misericórdia, Polônia, Mundo
+                    <div class="card-info">
+                        <strong>Patrona de:</strong> Mães, Esposas, Famílias em dificuldade
                     </div>
                 </div>
 
-                <div class="saint-card">
-                    <div class="saint-name">São Padre Pio</div>
-                    <div class="saint-title">Estigmatizado de Pietrelcina</div>
-                    <div class="saint-date">23 de Setembro</div>
-                    <div class="saint-description">
-                        Frade capuchinho italiano que recebeu os estigmas de Cristo por 50 anos. 
-                        Possuía dons místicos como bilocação, cura e leitura das almas. 
-                        Fundou a Casa Alívio do Sofrimento, hospital em San Giovanni Rotondo.
+                <div class="card">
+                    <div class="card-title">São Vicente de Paulo</div>
+                    <div class="card-subtitle">Patrono da Pastoral Social</div>
+                    <div class="card-date">27 de Setembro</div>
+                    <div class="card-description">
+                        Sacerdote francês dedicado aos pobres e marginalizados. 
+                        Fundou as Filhas da Caridade e organizou obras 
+                        assistenciais inovadoras para sua época.
                     </div>
-                    <div class="saint-patronage">
-                        <strong>Patrono de:</strong> Grupos de oração, Voluntários, Estressados
+                    <div class="card-info">
+                        <strong>Patrono de:</strong> Obras de caridade, Pobres, Voluntários
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">São Camilo de Lellis</div>
+                    <div class="card-subtitle">Patrono da Pastoral da Saúde</div>
+                    <div class="card-date">14 de Julho</div>
+                    <div class="card-description">
+                        Fundou a Ordem dos Ministros dos Enfermos. 
+                        Revolucionou o cuidado hospitalar com práticas 
+                        de higiene e assistência humanizada aos doentes.
+                    </div>
+                    <div class="card-info">
+                        <strong>Patrono de:</strong> Enfermeiros, Hospitais, Doentes
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">São Francisco de Sales</div>
+                    <div class="card-subtitle">Patrono da Pastoral da Comunicação</div>
+                    <div class="card-date">24 de Janeiro</div>
+                    <div class="card-description">
+                        Bispo e doutor da Igreja, pioneiro no uso da imprensa 
+                        para evangelização. Escreveu obras espirituais acessíveis 
+                        aos leigos, promovendo a santidade para todos.
+                    </div>
+                    <div class="card-info">
+                        <strong>Patrono de:</strong> Jornalistas, Escritores, Comunicadores
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Santo Isidoro Lavrador</div>
+                    <div class="card-subtitle">Patrono da Pastoral Rural</div>
+                    <div class="card-date">15 de Maio</div>
+                    <div class="card-description">
+                        Camponês espanhol que santificou o trabalho agrícola. 
+                        Exemplo de como viver a fé no trabalho cotidiano, 
+                        combinando oração e labor no campo.
+                    </div>
+                    <div class="card-info">
+                        <strong>Patrono de:</strong> Agricultores, Trabalhadores rurais, Ecologia
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="marianos">
+            <div class="category-header">
+                <div class="category-icon">♡</div>
+                <h2>Títulos Marianos</h2>
+                <p>As diversas invocações à Santíssima Virgem Maria</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">Nossa Senhora Aparecida</div>
+                    <div class="card-subtitle">Padroeira do Brasil</div>
+                    <div class="card-date">12 de Outubro</div>
+                    <div class="card-description">
+                        Imagem encontrada por pescadores no Rio Paraíba em 1717. 
+                        Tornou-se símbolo da fé brasileira e centro de peregrinação. 
+                        Proclamada Padroeira do Brasil pelo Papa Pio XI.
+                    </div>
+                    <div class="card-info">
+                        <strong>Santuário:</strong> Aparecida, São Paulo - Brasil
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Nossa Senhora de Fátima</div>
+                    <div class="card-subtitle">Rainha da Paz</div>
+                    <div class="card-date">13 de Maio</div>
+                    <div class="card-description">
+                        Aparições a três pastorinhos em 1917 em Portugal. 
+                        Mensagem de oração, penitência e devoção ao Imaculado Coração. 
+                        Pedido de consagração da Rússia.
+                    </div>
+                    <div class="card-info">
+                        <strong>Videntes:</strong> Lúcia, Francisco e Jacinta
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Nossa Senhora de Lourdes</div>
+                    <div class="card-subtitle">Imaculada Conceição</div>
+                    <div class="card-date">11 de Fevereiro</div>
+                    <div class="card-description">
+                        Aparições a Santa Bernadette em 1858 na França. 
+                        Confirmação do dogma da Imaculada Conceição. 
+                        Fonte milagrosa e centro mundial de peregrinação.
+                    </div>
+                    <div class="card-info">
+                        <strong>Frase:</strong> "Eu sou a Imaculada Conceição"
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Nossa Senhora de Guadalupe</div>
+                    <div class="card-subtitle">Padroeira das Américas</div>
+                    <div class="card-date">12 de Dezembro</div>
+                    <div class="card-description">
+                        Aparição ao índio Juan Diego em 1531 no México. 
+                        Imagem milagrosa no tilma que permanece incorrupta. 
+                        Símbolo da evangelização das Américas.
+                    </div>
+                    <div class="card-info">
+                        <strong>Milagre:</strong> Imagem impressa sobrenaturalmente no manto
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Nossa Senhora do Carmo</div>
+                    <div class="card-subtitle">Mãe e Decoro do Carmelo</div>
+                    <div class="card-date">16 de Julho</div>
+                    <div class="card-description">
+                        Devoção ligada à Ordem Carmelita e ao escapulário. 
+                        Promessa de proteção especial aos devotos que usam 
+                        o escapulário com fé e devoção.
+                    </div>
+                    <div class="card-info">
+                        <strong>Promessa:</strong> Salvação para quem morrer usando o escapulário
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Nossa Senhora Auxiliadora</div>
+                    <div class="card-subtitle">Auxílio dos Cristãos</div>
+                    <div class="card-date">24 de Maio</div>
+                    <div class="card-description">
+                        Título instituído pelo Papa Pio V após a vitória de Lepanto. 
+                        Especial devoção de São João Bosco e dos Salesianos. 
+                        Invocada em momentos de dificuldade e perigo.
+                    </div>
+                    <div class="card-info">
+                        <strong>Oração:</strong> "Maria Auxiliadora, rogai por nós"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exame">
+            <div class="category-header">
+                <div class="category-icon">※</div>
+                <h2>Exame de Consciência</h2>
+                <p>Reflexão para o crescimento espiritual e preparação sacramental</p>
+            </div>
+
+            <div class="section-card">
+                <h3>Como fazer o Exame de Consciência</h3>
+                <p>O exame de consciência é uma prática espiritual que nos ajuda a reconhecer nossos pecados, 
+                crescer em virtude e nos preparar dignamente para os sacramentos da Confissão e Eucaristia.</p>
+                
+                <div class="highlight-box">
+                    <h4>Passos para o Exame:</h4>
+                    <p>1. Invocar o Espírito Santo<br>
+                    2. Revisar pensamentos, palavras e ações<br>
+                    3. Reconhecer pecados e falhas<br>
+                    4. Fazer propósito de emenda<br>
+                    5. Agradecer pelas graças recebidas</p>
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Primeiro Mandamento - Amar a Deus sobre todas as coisas</div>
+                <div class="card-description">
+                    • Coloquei algo ou alguém acima de Deus em minha vida?<br>
+                    • Pratiquei superstições, consulta a cartomantes ou horóscopos?<br>
+                    • Participei da Missa dominical e dias santos?<br>
+                    • Dediquei tempo à oração pessoal?<br>
+                    • Blasfemei ou usei o nome de Deus em vão?
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Quarto Mandamento - Honrar pai e mãe</div>
+                <div class="card-description">
+                    • Respeitei e obedeci meus pais e superiores?<br>
+                    • Cuidei dos meus pais idosos ou necessitados?<br>
+                    • Como pai/mãe, eduquei meus filhos na fé?<br>
+                    • Respeitei as autoridades legítimas?<br>
+                    • Fui grato pelos cuidados recebidos?
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Quinto Mandamento - Não matar</div>
+                <div class="card-description">
+                    • Causei dano físico ou moral a alguém?<br>
+                    • Guardei ódio, rancor ou desejo de vingança?<br>
+                    • Pratiquei ou apoiei o aborto ou eutanásia?<br>
+                    • Cuidei da minha saúde e da dos outros?<br>
+                    • Usei drogas ou álcool em excesso?
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Sexto e Nono Mandamentos - Pureza</div>
+                <div class="card-description">
+                    • Vivi a castidade conforme meu estado de vida?<br>
+                    • Consumi pornografia ou material impuro?<br>
+                    • Respeitei a dignidade do meu corpo e do próximo?<br>
+                    • Fui fiel ao meu cônjuge em pensamentos e ações?<br>
+                    • Eduquei adequadamente sobre a sexualidade?
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Sétimo e Décimo Mandamentos - Justiça</div>
+                <div class="card-description">
+                    • Roubei ou desejei os bens alheios?<br>
+                    • Fui honesto em meu trabalho e negócios?<br>
+                    • Paguei salários justos e impostos devidos?<br>
+                    • Reparei danos causados ao próximo?<br>
+                    • Pratiquei a caridade com os necessitados?
+                </div>
+            </div>
+
+            <div class="exam-question">
+                <div class="exam-category">Oitavo Mandamento - Não dar falso testemunho</div>
+                <div class="card-description">
+                    • Menti ou enganei alguém?<br>
+                    • Fiz fofocas ou falei mal dos outros?<br>
+                    • Guardei segredos que me foram confiados?<br>
+                    • Julguei precipitadamente o próximo?<br>
+                    • Reparei calúnias ou difamações que cometi?
+                </div>
+            </div>
+        </section>
+
+        <section id="calendario">
+            <div class="category-header">
+                <div class="category-icon">◊</div>
+                <h2>Calendário e Tempos Litúrgicos</h2>
+                <p>O ano litúrgico e suas celebrações</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">Advento</div>
+                    <div class="card-subtitle">Preparação para o Natal</div>
+                    <div class="card-date">4 domingos antes do Natal</div>
+                    <div class="card-description">
+                        Tempo de preparação espiritual para celebrar o nascimento de Jesus 
+                        e aguardar sua segunda vinda. Cor litúrgica roxa, 
+                        simbolizando penitência e expectativa.
+                    </div>
+                    <div class="card-info">
+                        <strong>Símbolos:</strong> Coroa do Advento, velas, calendário
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Tempo do Natal</div>
+                    <div class="card-subtitle">Celebração da Encarnação</div>
+                    <div class="card-date">25 de dezembro a Batismo do Senhor</div>
+                    <div class="card-description">
+                        Celebração do nascimento de Jesus Cristo. Inclui as solenidades 
+                        da Sagrada Família, Santa Maria Mãe de Deus, Epifania 
+                        e Batismo do Senhor. Cor litúrgica branca.
+                    </div>
+                    <div class="card-info">
+                        <strong>Duração:</strong> Aproximadamente 20 dias
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Quaresma</div>
+                    <div class="card-subtitle">Preparação para a Páscoa</div>
+                    <div class="card-date">Quarta-feira de Cinzas a Quinta-feira Santa</div>
+                    <div class="card-description">
+                        40 dias de preparação para a Páscoa através da oração, 
+                        jejum e esmola. Tempo de conversão e penitência. 
+                        Cor litúrgica roxa.
+                    </div>
+                    <div class="card-info">
+                        <strong>Práticas:</strong> Via Sacra, jejum, abstinência, caridade
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Tríduo Pascal</div>
+                    <div class="card-subtitle">Coração do Ano Litúrgico</div>
+                    <div class="card-date">Quinta-feira Santa ao Domingo de Páscoa</div>
+                    <div class="card-description">
+                        Celebração da Paixão, Morte e Ressurreição de Jesus. 
+                        Inclui a Ceia do Senhor, Paixão do Senhor e Vigília Pascal. 
+                        Ápice de todo o ano litúrgico.
+                    </div>
+                    <div class="card-info">
+                        <strong>Cores:</strong> Branco na Quinta, sem cor na Sexta, branco no Sábado
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Tempo Pascal</div>
+                    <div class="card-subtitle">Celebração da Ressurreição</div>
+                    <div class="card-date">Domingo de Páscoa a Pentecostes</div>
+                    <div class="card-description">
+                        50 dias de alegria pascal celebrando a Ressurreição de Cristo. 
+                        Inclui a Ascensão do Senhor e termina com Pentecostes. 
+                        Cor litúrgica branca e vermelha em Pentecostes.
+                    </div>
+                    <div class="card-info">
+                        <strong>Saudação:</strong> "Cristo Ressuscitou! Aleluia!"
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Tempo Comum</div>
+                    <div class="card-subtitle">Crescimento na Fé</div>
+                    <div class="card-date">Após Batismo do Senhor e após Pentecostes</div>
+                    <div class="card-description">
+                        Período de crescimento espiritual através dos ensinamentos 
+                        de Jesus. Inclui solenidades como Santíssima Trindade, 
+                        Corpus Christi e Cristo Rei. Cor litúrgica verde.
+                    </div>
+                    <div class="card-info">
+                        <strong>Duração:</strong> 33 ou 34 semanas por ano
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>Principais Solenidades</h3>
+                <div class="grid">
+                    <div style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                        <strong>Imaculada Conceição</strong> - 8 de dezembro<br>
+                        <em>Padroeira do Brasil, dogma mariano</em>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                        <strong>Sagrado Coração de Jesus</strong> - Sexta após 2º domingo de Pentecostes<br>
+                        <em>Devoção ao amor misericordioso de Cristo</em>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                        <strong>Assunção de Nossa Senhora</strong> - 15 de agosto<br>
+                        <em>Elevação de Maria ao céu em corpo e alma</em>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                        <strong>Todos os Santos</strong> - 1º de novembro<br>
+                        <em>Celebração de todos os bem-aventurados</em>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="oracao" class="prayer-section">
-            <h2>🙏 Oração aos Santos</h2>
+            <h2>Oração da Igreja</h2>
             <div class="prayer-text">
-                "Ó Santos e Santas de Deus,<br>
-                que vivestes na terra como nós<br>
-                e agora gozais da visão beatífica,<br>
-                intercedei por nós junto ao Pai.<br><br>
-                
-                Ajudai-nos a seguir vosso exemplo<br>
-                de fé, esperança e caridade,<br>
-                para que um dia possamos<br>
-                juntar-nos a vós na glória eterna.<br><br>
+                "Ó Deus, que constituístes vossa Igreja<br>
+                como sacramento universal de salvação,<br>
+                concedei-nos a graça de perseverar<br>
+                na fé dos Apóstolos,<br>
+                na comunhão fraterna<br>
+                e na fração do pão,<br>
+                para que sejamos no mundo<br>
+                testemunhas fiéis do vosso amor.<br><br>
                 
                 Por Cristo nosso Senhor.<br>
                 Amém."
             </div>
             
-            <div class="highlight-box" style="background: rgba(218, 165, 32, 0.2); border-color: #daa520;">
-                <h3>✨ Comunhão dos Santos</h3>
-                <p style="color: #daa520;">
-                    "Cremos na comunhão de todos os fiéis cristãos, dos que peregrinam na terra, 
-                    dos que se purificam depois da morte e dos que gozam da bem-aventurança celeste, 
-                    formando todos juntos uma só Igreja."
+            <div class="highlight-box" style="background: rgba(240, 217, 130, 0.3); border-color: #f0d982;">
+                <h3>Una, Santa, Católica e Apostólica</h3>
+                <p style="color: #8b6914;">
+                    "Creio na Igreja, una, santa, católica e apostólica. 
+                    Confesso um só batismo para remissão dos pecados. 
+                    Espero a ressurreição dos mortos e a vida do mundo que há de vir. Amém."
                 </p>
             </div>
         </section>
@@ -719,13 +1048,13 @@
 
     <footer>
         <div class="container">
-            <div class="cross-decoration">✠ ✠ ✠</div>
-            <p>⛪ Santos e Santas - Guia Espiritual</p>
+            <div class="cross-decoration">+ + +</div>
+            <p>Igreja Católica Apostólica Romana - Guia da Fé</p>
             <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
-                "Sede santos, porque Eu sou santo" - 1 Pedro 1:16
+                "Tu és Pedro, e sobre esta pedra edificarei a minha Igreja" - Mateus 16:18
             </p>
             <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 1rem;">
-                Site educativo sobre a vida dos santos da Igreja Católica
+                Site educativo sobre a doutrina e tradições da Santa Igreja Católica
             </p>
         </div>
     </footer>
@@ -747,7 +1076,7 @@
 
         // Animação suave ao carregar a página
         window.addEventListener('load', function() {
-            document.querySelectorAll('.saint-card, .section-card').forEach((card, index) => {
+            document.querySelectorAll('.card, .section-card, .timeline-item, .exam-question').forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(30px)';
                 card.style.transition = 'all 0.8s ease';
@@ -755,7 +1084,7 @@
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, index * 150);
+                }, index * 100);
             });
         });
 
@@ -763,14 +1092,36 @@
         setInterval(() => {
             const crosses = document.querySelectorAll('.cross-decoration');
             crosses.forEach(cross => {
-                cross.style.textShadow = '0 0 20px #daa520, 0 0 30px #daa520';
+                cross.style.textShadow = '0 0 15px #d4af37, 0 0 25px #d4af37';
                 setTimeout(() => {
-                    cross.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)';
-                }, 1000);
+                    cross.style.textShadow = '1px 1px 2px rgba(139, 105, 20, 0.2)';
+                }, 1500);
             });
-        }, 3000);
+        }, 4000);
+
+        // Destacar seção ativa na navegação
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = 'rgba(255, 255, 255, 0.6)';
+                link.style.color = '#8b6914';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.background = '#f0d982';
+                    link.style.color = '#6b5011';
+                }
+            });
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5c1ac73b3c20f',t:'MTc1OTc1OTk3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5d69ae75ec20f',t:'MTc1OTc2MDgzMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
