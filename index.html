@@ -1,2 +1,458 @@
-oio
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental e Redes Sociais - Informação e Apoio</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #4a5568;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 3rem 0;
+            margin: 2rem 0;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 5px solid #ff8a65;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .support-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .emergency-card {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border: 2px solid #ff6b6b;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-emergency {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+
+        .btn-emergency:hover {
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .section-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🧠 Saúde Mental & Redes Sociais</h1>
+            <p class="subtitle">Informação, conscientização e apoio para o bem-estar digital</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#conexao">A Conexão</a>
+                <a href="#impactos">Impactos</a>
+                <a href="#videos">Vídeos</a>
+                <a href="#noticias">Notícias</a>
+                <a href="#apoio">Rede de Apoio</a>
+                <a href="#emergencia">Emergência</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="conexao">
+            <div class="section-card">
+                <h2>🔗 Como Saúde Mental e Redes Sociais Estão Conectadas</h2>
+                <p>As redes sociais transformaram a forma como nos relacionamos e percebemos o mundo. Embora ofereçam benefícios como conexão e informação, também podem impactar significativamente nossa saúde mental.</p>
+                
+                <div class="highlight-box">
+                    <h3>📊 Dados Importantes:</h3>
+                    <ul>
+                        <li>Jovens que passam mais de 3 horas diárias em redes sociais têm maior risco de problemas de saúde mental</li>
+                        <li>90% dos adolescentes usam redes sociais regularmente</li>
+                        <li>Comparação social é um dos principais fatores de ansiedade e depressão</li>
+                    </ul>
+                </div>
+
+                <h3>🎭 O Problema da "Vida Perfeita"</h3>
+                <p>As redes sociais frequentemente apresentam versões idealizadas da realidade, criando padrões inalcançáveis que podem levar a:</p>
+                <ul>
+                    <li><strong>Baixa autoestima:</strong> Comparação constante com outros</li>
+                    <li><strong>Ansiedade social:</strong> Medo de não ser aceito ou "curtido"</li>
+                    <li><strong>Depressão:</strong> Sentimento de inadequação e isolamento</li>
+                    <li><strong>Distúrbios alimentares:</strong> Pressão por padrões de beleza irreais</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="impactos">
+            <div class="section-card">
+                <h2>⚠️ Principais Impactos na Saúde Mental</h2>
+                
+                <h3>🔄 Ciclo Vicioso da Comparação</h3>
+                <p>O algoritmo das redes sociais é projetado para manter nossa atenção, muitas vezes mostrando conteúdo que pode ser prejudicial ao nosso bem-estar mental.</p>
+
+                <div class="highlight-box">
+                    <h3>🚨 Sinais de Alerta:</h3>
+                    <ul>
+                        <li>Verificar redes sociais compulsivamente</li>
+                        <li>Sentir-se triste ou ansioso após usar as redes</li>
+                        <li>Comparar-se constantemente com outros</li>
+                        <li>Perder sono por causa das redes sociais</li>
+                        <li>Evitar atividades offline</li>
+                    </ul>
+                </div>
+
+                <h3>💡 Dicas para Uso Saudável</h3>
+                <ul>
+                    <li><strong>Defina limites de tempo:</strong> Use ferramentas de controle parental</li>
+                    <li><strong>Cuide do que consome:</strong> Siga contas que promovem positividade</li>
+                    <li><strong>Pratique o detox digital:</strong> Períodos sem redes sociais</li>
+                    <li><strong>Lembre-se:</strong> As redes mostram apenas uma parte da realidade</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="videos">
+            <div class="section-card">
+                <h2>🎥 Vídeos Educativos</h2>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <h3>📱 Como as Redes Sociais Afetam o Cérebro</h3>
+                        <p>Documentário explicando os mecanismos neurológicos por trás do vício em redes sociais.</p>
+                        <a href="https://www.youtube.com/watch?v=NUMa0QkPzns" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>🧘 Mindfulness e Tecnologia</h3>
+                        <p>Técnicas de mindfulness para usar a tecnologia de forma mais consciente.</p>
+                        <a href="https://www.youtube.com/watch?v=wLTQjMVqvQw" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>👥 Saúde Mental na Era Digital</h3>
+                        <p>Palestra sobre os desafios da saúde mental no mundo digital atual.</p>
+                        <a href="https://www.youtube.com/watch?v=6jMhMVEjEQg" target="_blank" rel="noopener noreferrer" class="btn">Assistir no YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias">
+            <div class="section-card">
+                <h2>📰 Notícias e Artigos Relevantes</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <h3>📊 Pesquisa: Redes Sociais e Ansiedade</h3>
+                        <p>Estudo recente mostra correlação entre uso excessivo de redes sociais e transtornos de ansiedade em jovens.</p>
+                        <a href="https://www.bbc.com/portuguese/articles/c4n1k8zk8z4o" target="_blank" rel="noopener noreferrer" class="btn">Ler Artigo</a>
+                    </div>
+                    <div class="news-card">
+                        <h3>🏥 OMS Reconhece Vício em Internet</h3>
+                        <p>Organização Mundial da Saúde inclui transtorno de jogos online na lista de doenças mentais.</p>
+                        <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank" rel="noopener noreferrer" class="btn">Ler no Site da OMS</a>
+                    </div>
+                    <div class="news-card">
+                        <h3>🇧🇷 Saúde Mental no Brasil</h3>
+                        <p>Dados sobre saúde mental no Brasil e o impacto das redes sociais na população jovem.</p>
+                        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-mental" target="_blank" rel="noopener noreferrer" class="btn">Portal do Ministério da Saúde</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apoio">
+            <div class="section-card">
+                <h2>🤝 Rede de Apoio e Suporte</h2>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="icon">💬</div>
+                        <h3>Centro de Valorização da Vida (CVV)</h3>
+                        <div class="contact-info">📞 188</div>
+                        <p>Apoio emocional e prevenção do suicídio. Atendimento gratuito 24h.</p>
+                        <a href="https://www.cvv.org.br" target="_blank" rel="noopener noreferrer" class="btn">Site Oficial</a>
+                    </div>
+                    <div class="support-card">
+                        <div class="icon">🏥</div>
+                        <h3>CAPS - Centro de Atenção Psicossocial</h3>
+                        <div class="contact-info">📞 136</div>
+                        <p>Atendimento público especializado em saúde mental.</p>
+                        <a href="https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/caps" target="_blank" rel="noopener noreferrer" class="btn">Encontrar CAPS</a>
+                    </div>
+                    <div class="support-card">
+                        <div class="icon">👨‍⚕️</div>
+                        <h3>Mapa da Saúde Mental</h3>
+                        <p>Encontre profissionais e serviços de saúde mental na sua região.</p>
+                        <a href="https://www.mapadasaudemental.com.br" target="_blank" rel="noopener noreferrer" class="btn">Acessar Mapa</a>
+                    </div>
+                    <div class="support-card">
+                        <div class="icon">💙</div>
+                        <h3>Setembro Amarelo</h3>
+                        <p>Campanha de prevenção ao suicídio com recursos e informações.</p>
+                        <a href="https://www.setembroamarelo.com" target="_blank" rel="noopener noreferrer" class="btn">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="emergencia">
+            <div class="section-card">
+                <h2>🚨 Em Situação de Emergência</h2>
+                <div class="support-grid">
+                    <div class="support-card emergency-card">
+                        <div class="icon">🆘</div>
+                        <h3>SAMU - Emergências Médicas</h3>
+                        <div class="contact-info">📞 192</div>
+                        <p>Para emergências médicas graves, incluindo crises de saúde mental.</p>
+                        <a href="tel:192" class="btn btn-emergency">Ligar Agora</a>
+                    </div>
+                    <div class="support-card emergency-card">
+                        <div class="icon">🚔</div>
+                        <h3>Polícia Militar</h3>
+                        <div class="contact-info">📞 190</div>
+                        <p>Para situações de risco imediato à segurança.</p>
+                        <a href="tel:190" class="btn btn-emergency">Ligar Agora</a>
+                    </div>
+                    <div class="support-card emergency-card">
+                        <div class="icon">💙</div>
+                        <h3>CVV - Crise Emocional</h3>
+                        <div class="contact-info">📞 188</div>
+                        <p>Apoio imediato em crises emocionais e pensamentos suicidas.</p>
+                        <a href="tel:188" class="btn btn-emergency">Ligar Agora</a>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>⚠️ Lembre-se:</h3>
+                    <p><strong>Se você ou alguém que conhece está em risco imediato, não hesite em buscar ajuda profissional. Sua vida é valiosa e existem pessoas dispostas a ajudar.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Site Educativo sobre Saúde Mental e Redes Sociais</p>
+            <p>Este site tem fins informativos e não substitui acompanhamento profissional.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação suave ao carregar a página
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.section-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 200);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5a1f094dac20f',t:'MTc1OTc1ODY3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
